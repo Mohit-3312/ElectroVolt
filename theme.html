@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Purple Blue Website</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --primary: #5F2EEA;   /* Purple */
+      --secondary: #3A86FF; /* Blue */
+      --background: #0B0F1A;
+      --text: #FFFFFF;
+      --card: #141A2E;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    body {
+      background: linear-gradient(135deg, var(--primary), var(--secondary));
+      min-height: 100vh;
+      color: var(--text);
+    }
+
+    header {
+      padding: 20px 40px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    header h1 {
+      font-size: 24px;
+      font-weight: 600;
+    }
+
+    nav a {
+      color: var(--text);
+      margin-left: 20px;
+      text-decoration: none;
+      font-weight: 400;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
+    }
+
+    .hero {
+      text-align: center;
+      padding: 100px 20px;
+    }
+
+    .hero h2 {
+      font-size: 48px;
+      margin-bottom: 20px;
+    }
+
+    .hero p {
+      font-size: 18px;
+      max-width: 600px;
+      margin: auto;
+      opacity: 0.9;
+    }
+
+    .hero button {
+      margin-top: 30px;
+      padding: 12px 30px;
+      border: none;
+      border-radius: 30px;
+      background: #ffffff;
+      color: var(--primary);
+      font-size: 16px;
+      cursor: pointer;
+      font-weight: 600;
+    }
+
+    .hero button:hover {
+      opacity: 0.9;
+    }
+
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+      padding: 40px;
+      background: var(--background);
+    }
+
+    .card {
+      background: var(--card);
+      padding: 30px;
+      border-radius: 16px;
+      text-align: center;
+    }
+
+    .card h3 {
+      margin-bottom: 10px;
+    }
+
+    .card p {
+      font-size: 14px;
+      opacity: 0.85;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      background: #060814;
+      font-size: 14px;
+      opacity: 0.8;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>MyWebsite</h1>
+    <nav>
+      <a href="#">Home</a>
+      <a href="#">About</a>
+      <a href="#">Services</a>
+      <a href="#">Contact</a>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <h2>Purple & Blue Modern Website</h2>
+    <p>
+      A clean, modern HTML website with a beautiful purple and blue gradient theme.
+      Perfect for portfolios, startups, or personal projects.
+    </p>
+    <button>Get Started</button>
+  </section>
+
+  <section class="cards">
+    <div class="card">
+      <h3>Fast</h3>
+      <p>Lightweight and optimized for speed.</p>
+    </div>
+    <div class="card">
+      <h3>Responsive</h3>
+      <p>Looks great on all devices.</p>
+    </div>
+    <div class="card">
+      <h3>Modern</h3>
+      <p>Clean design with a trendy color palette.</p>
+    </div>
+  </section>
+
+  <footer>
+    © 2026 MyWebsite. All rights reserved.
+  </footer>
+
+</body>
+</html>
