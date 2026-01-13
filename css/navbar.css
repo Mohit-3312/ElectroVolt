@@ -4,3 +4,9 @@
 .dropdown-item:hover{
   color: black !important;
 }
+.dropdown-menu{
+  width: 200px;
+}
+.form-control:hover{
+  border: 3px solid green;
+}
