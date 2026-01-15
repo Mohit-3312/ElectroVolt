@@ -1,5 +1,5 @@
 const navbarHTML = `
-  <nav class="navbar navbar-expand-lg bg-primary text-primary-emphasis">
+  <nav class="navbar navbar-expand-lg bg-primary text-primary-emphasis" style="max-height:80px">
   <div class="container-fluid">
     <p class="navbar-brand text-light fs-3 mt-3" disabled>ElectroVolt</p>
     <form class="d-flex ps-3 gap-3" role="search">
@@ -13,10 +13,10 @@ const navbarHTML = `
     <div class="collapse navbar-collapse text-center" id="navbarSupportedContent">
       <ul class="navbar-nav m-auto mb-2 mb-lg-0 gap-3 fs-5">
         <li class="nav-item">
-          <a class="nav-link active text-light" aria-current="page" href="index.html" >Home</a>
+          <a class="nav-link active text-light rounded-4" aria-current="page" href="index.html" >Home</a>
         </li>
         <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle text-light" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+          <a class="nav-link dropdown-toggle text-light rounded-4" role="button" data-bs-toggle="dropdown" aria-expanded="false">
             Products
           </a>
           <ul class="dropdown-menu bg-primary mx-auto my-0">
@@ -29,10 +29,10 @@ const navbarHTML = `
           </ul>
         </li>
         <li class="nav-item">
-          <a class="nav-link text-light" href="order.html">Order</a>
+          <a class="nav-link text-light rounded-4" href="order.html">Order</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link text-light" href="about-us.html">About Us</a>
+          <a class="nav-link text-light rounded-4" href="about-us.html">About Us</a>
         </li>
       </ul>
       <button type="button" class="btn btn-outline-light mt-lg-0 mt-3">Sign Up</button>

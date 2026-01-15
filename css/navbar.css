@@ -10,3 +10,7 @@
 .form-control:hover{
   border: 3px solid green;
 }
+.nav-link:hover{
+  background-color: white;
+  color: black !important;
+}
