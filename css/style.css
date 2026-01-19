@@ -6,7 +6,57 @@
 }
 
 body {
-  background: linear-gradient(135deg, #2ec1ea, #b03aff);
+  background-color: black;
   min-height: 100vh;
   color: #FFFFFF;
+}
+
+/* Add this to your CSS file */
+@media (max-width: 768px) {
+  /* Fix the Hero height for mobile */
+  .carousel-item {
+    height: 45vh !important; 
+    min-height: 300px !important;
+  }
+
+  /* Shrink the massive headings */
+  .carousel-caption h1 {
+    font-size: 1.8rem !important;
+  }
+
+  /* Hide the lead text on very small screens to save space */
+  .carousel-caption p {
+    font-size: 0.9rem !important;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+}
+/* Container must be relative for the absolute mask to work */
+.carousel-item {
+    position: relative;
+}
+
+.hero-gradient-mask {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 50%; /* Adjust this to make the fade taller or shorter */
+    /* Fades from Transparent to Bootstrap's bg-dark color (#212529) */
+    background: linear-gradient(to bottom, rgba(33, 37, 41, 0) 0%, rgba(33, 37, 41, 1) 100%);
+    z-index: 1;
+}
+
+/* Push the text above the mask */
+.carousel-caption {
+    z-index: 2;
+}
+
+/* Smooth mobile adjustment */
+@media (max-width: 768px) {
+    .hero-gradient-mask {
+        height: 70%; /* Higher fade on mobile looks cleaner with stacked text */
+    }
 }

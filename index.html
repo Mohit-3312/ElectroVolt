@@ -8,11 +8,54 @@
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="bootstrap/bootstrap.min.css">
 </head>
-<body>
+<body class="bg-dark">
   <!--      Navbar        -->
   <div id="navbar-holder"></div>
 
   
+
+
+
+  <div id="heroCarousel" class="carousel slide carousel-fade" data-bs-ride="carousel">
+  <div class="carousel-indicators">
+    <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="0" class="active"></button>
+    <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="1"></button>
+  </div>
+  
+  <div class="carousel-inner">
+    <div class="carousel-item active" style="height: 70vh; min-height: 400px;">
+      <img src="https://images.unsplash.com/photo-1593305841991-05c297ba4575?auto=format&fit=crop&q=80&w=1920" class="d-block w-100 h-100" style="object-fit: cover; filter: brightness(0.7);" alt="Gaming Monitor">
+      
+      <div class="hero-gradient-mask"></div>
+
+      <div class="carousel-caption d-md-block text-start mb-5 pb-5">
+        <h1 class="display-3 fw-bold text-uppercase">Next-Gen Gaming</h1>
+        <p class="lead">Experience 240Hz refresh rates with the new UltraVision OLED series.</p>
+        <a href="#" class="btn btn-primary btn-lg px-4 me-md-2">Shop Now</a>
+        <a href="#" class="btn btn-outline-light btn-lg px-4">Learn More</a>
+      </div>
+    </div>
+
+    <div class="carousel-item" style="height: 70vh; min-height: 400px;">
+      <img src="https://images.unsplash.com/photo-1550009158-9ebf69173e03?auto=format&fit=crop&q=80&w=1920" class="d-block w-100 h-100" style="object-fit: cover; filter: brightness(0.6);" alt="Accessories">
+      
+      <div class="hero-gradient-mask"></div>
+
+      <div class="carousel-caption d-md-block mb-5 pb-5">
+        <h1 class="display-3 fw-bold">Upgrade Your Setup</h1>
+        <p class="lead">Save up to 30% on premium audio and peripherals this week only.</p>
+        <a href="#" class="btn btn-warning btn-lg px-4">Claim Discount</a>
+      </div>
+    </div>
+  </div>
+  
+  <button class="carousel-control-prev" type="button" data-bs-target="#heroCarousel" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon"></span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#heroCarousel" data-bs-slide="next">
+    <span class="carousel-control-next-icon"></span>
+  </button>
+</div>
 
   <script src="bootstrap/bootstrap.bundle.min.js"></script>
   <script src="scripts/add-navbar.js"></script>
