@@ -1,7 +1,7 @@
 const navbarHTML = `
-  <nav class="navbar navbar-expand-lg bg-primary text-primary-emphasis" style="max-height:80px">
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark py-2 py-lg-0">
   <div class="container-fluid">
-    <p class="navbar-brand text-light fs-3 mt-3" disabled>ElectroVolt</p>
+    <p class="navbar-brand text-light fs-3 mt-3" disabled>Electro<span class="text-primary">Volt</span></p>
     <form class="d-flex ps-3 gap-3" role="search">
         <input class="form-control m-auto " type="search" placeholder="Search" aria-label="Search"/>
         <button class="btn btn-outline-light" type="submit">Search</button>
@@ -13,13 +13,13 @@ const navbarHTML = `
     <div class="collapse navbar-collapse text-center" id="navbarSupportedContent">
       <ul class="navbar-nav m-auto mb-2 mb-lg-0 gap-3 fs-5">
         <li class="nav-item">
-          <a class="nav-link active text-light rounded-4" aria-current="page" href="index.html" >Home</a>
+          <a class="nav-link active text-light rounded-4 text-light" aria-current="page" href="index.html" >Home</a>
         </li>
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle text-light rounded-4" role="button" data-bs-toggle="dropdown" aria-expanded="false">
             Products
           </a>
-          <ul class="dropdown-menu bg-primary mx-auto my-0">
+          <ul class="dropdown-menu dropdown-dark bg-dark mx-auto my-0">
             <li><a class="dropdown-item text-white " href="home-appliances.html">Home Appliances</a></li>
             <li><a class="dropdown-item text-white " href="mobile.html">Mobile</a></li>
             <li><a class="dropdown-item text-white " href="laptop.html">Laptop</a></li>
