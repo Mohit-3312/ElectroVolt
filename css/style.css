@@ -6,7 +6,6 @@
 }
 
 body {
-  background-color: black;
   min-height: 100vh;
   color: #FFFFFF;
 }
@@ -33,30 +32,36 @@ body {
     overflow: hidden;
   }
 }
-/* Container must be relative for the absolute mask to work */
-.carousel-item {
-    position: relative;
-}
-
-.hero-gradient-mask {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    height: 50%; /* Adjust this to make the fade taller or shorter */
-    /* Fades from Transparent to Bootstrap's bg-dark color (#212529) */
-    background: linear-gradient(to bottom, rgba(33, 37, 41, 0) 0%, rgba(33, 37, 41, 1) 100%);
-    z-index: 1;
-}
-
-/* Push the text above the mask */
-.carousel-caption {
-    z-index: 2;
-}
 
 /* Smooth mobile adjustment */
 @media (max-width: 768px) {
     .hero-gradient-mask {
         height: 70%; /* Higher fade on mobile looks cleaner with stacked text */
     }
+}
+.card{
+  background: #2c3034 !important;
+  transition: all 0.5s;
+  border: 1px solid #333;
+  margin-bottom: 20px;
+  color: #ffffff !important;
+}
+.card:hover{
+  background: linear-gradient(rgb(44, 43, 43),black) !important;
+  border-color: #343a40;
+  box-shadow: 0 10px 30px rgba(0, 212, 255, 0.3) !important; 
+  transform: translateY(-5px);
+}
+.card-img-top{
+  transition: all 0.5s ease-out;
+}
+.card-img-top:hover{
+  transform: scale(1.05);
+}
+
+.card a{
+  color: rgba(0, 0, 255, 0.501) !important;
+}
+.card-body a{
+  color: #00d4ff !important;
 }
