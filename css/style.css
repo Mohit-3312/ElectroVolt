@@ -39,14 +39,14 @@ body {
         height: 70%; /* Higher fade on mobile looks cleaner with stacked text */
     }
 }
-.card{
+.card-custom{
   background: #2c3034 !important;
   transition: all 0.5s;
   border: 1px solid #333;
   margin-bottom: 20px;
   color: #ffffff !important;
 }
-.card:hover{
+.card-custom:hover{
   background: linear-gradient(rgb(44, 43, 43),black) !important;
   border-color: #343a40;
   box-shadow: 0 10px 30px rgba(0, 212, 255, 0.3) !important; 
@@ -64,4 +64,29 @@ body {
 }
 .card-body a{
   color: #00d4ff !important;
+}
+
+/* This connects to the custom class we added to the HTML */
+.product-card {
+    transition: all 0.3s ease;
+    border: 1px solid #333 !important; /* Subtle border for dark mode */
+}
+
+.product-card:hover {
+    transform: translateY(-8px);
+    border-color: #00d4ff !important; /* Electric blue border */
+    box-shadow: 0 10px 20px rgba(0, 212, 255, 0.2) !important;
+}
+
+/* This targets the image inside our custom card specifically */
+.product-card:hover img {
+    transform: scale(1.05);
+    transition: 0.3s ease;
+}
+
+/* This makes the button glow when the card is hovered */
+.product-card:hover .btn-primary {
+    background-color: #00d4ff;
+    border-color: #00d4ff;
+    box-shadow: 0 0 10px rgba(0, 212, 255, 0.5);
 }
