@@ -7,10 +7,102 @@
   <link rel="stylesheet" href="css/navbar.css">
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="bootstrap/bootstrap.min.css">
+  <link rel="stylesheet" href="bootstrap/bootstrap-icons.min.css">
 </head>
 <body>
+
+
+  <!--            Added Navbar Using Javascript                        -->
   <div id="navbar-holder"></div>
 
+
+
+ 
+<!--            Added filter Using bootstrap                        -->
+
+<div class="container mt-4">
+    <button class="btn btn-outline-info shadow-sm d-flex align-items-center fw-bold" type="button" data-bs-toggle="offcanvas" data-bs-target="#filterMenu">
+        <i class="bi bi-funnel-fill me-2"></i> OPEN FILTERS
+    </button>
+</div>
+
+<div class="offcanvas offcanvas-start bg-dark text-white shadow-lg" tabindex="-1" id="filterMenu" style="width: 320px; z-index: 1060; border-right: 1px solid #333;">
+    
+    <div class="offcanvas-header border-bottom border-secondary">
+        <h5 class="offcanvas-title fw-bold text-info"><i class="bi bi-sliders2-vertical me-2"></i>Refine Products</h5>
+        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+    </div>
+
+    <div class="offcanvas-body custom-scrollbar">
+        <form id="filterForm">
+
+            <h6 class="text-info fw-bold mb-3">Appliance Type</h6>
+            <div class="filter-group mb-4">
+                <div class="form-check mb-2"><input class="form-check-input" type="checkbox" value="tv" id="f-tv"><label class="form-check-label" for="f-tv">Smart TVs</label></div>
+                <div class="form-check mb-2"><input class="form-check-input" type="checkbox" value="fridge" id="f-fridge"><label class="form-check-label" for="f-fridge">Refrigerators</label></div>
+                <div class="form-check mb-2"><input class="form-check-input" type="checkbox" value="wm" id="f-wm"><label class="form-check-label" for="f-wm">Washing Machines</label></div>
+                <div class="form-check mb-2"><input class="form-check-input" type="checkbox" value="ac" id="f-ac"><label class="form-check-label" for="f-ac">Air Conditioners</label></div>
+            </div>
+
+            <h6 class="text-info fw-bold mb-3">Price Range</h6>
+            <div class="mb-4 px-2">
+                <input type="range" class="form-range custom-range" min="0" max="150000" step="1000" id="priceRange">
+                <div class="d-flex justify-content-between small text-secondary">
+                    <span>₹0</span>
+                    <span class="text-white fw-bold">Up to ₹1.5L</span>
+                </div>
+            </div>
+
+            <h6 class="text-info fw-bold mb-3">Top Brands</h6>
+            <div class="filter-group mb-4">
+                <div class="form-check mb-2"><input class="form-check-input" type="checkbox" value="samsung" id="b-samsung"><label class="form-check-label" for="b-samsung">Samsung</label></div>
+                <div class="form-check mb-2"><input class="form-check-input" type="checkbox" value="lg" id="b-lg"><label class="form-check-label" for="b-lg">LG Electronics</label></div>
+                <div class="form-check mb-2"><input class="form-check-input" type="checkbox" value="sony" id="b-sony"><label class="form-check-label" for="b-sony">Sony</label></div>
+                <div class="form-check mb-2"><input class="form-check-input" type="checkbox" value="whirlpool" id="b-whirlpool"><label class="form-check-label" for="b-whirlpool">Whirlpool</label></div>
+            </div>
+
+            <h6 class="text-info fw-bold mb-3">Customer Rating</h6>
+            <div class="mb-4">
+                <div class="form-check mb-2">
+                    <input class="form-check-input" type="radio" name="rating" id="r4">
+                    <label class="form-check-label" for="r4">4 <i class="bi bi-star-fill text-warning"></i> & Above</label>
+                </div>
+                <div class="form-check mb-2">
+                    <input class="form-check-input" type="radio" name="rating" id="r3">
+                    <label class="form-check-label" for="r3">3 <i class="bi bi-star-fill text-warning"></i> & Above</label>
+                </div>
+            </div>
+
+            <h6 class="text-info fw-bold mb-3">Energy Rating</h6>
+            <select class="form-select form-select-sm bg-dark text-white border-secondary mb-4">
+                <option selected>All Ratings</option>
+                <option value="5">5 Star (Highly Efficient)</option>
+                <option value="4">4 Star & Above</option>
+                <option value="3">3 Star & Above</option>
+            </select>
+
+            <div class="form-check form-switch mb-4">
+                <input class="form-check-input" type="checkbox" id="stockSwitch" checked>
+                <label class="form-check-label" for="stockSwitch">Show In-Stock Only</label>
+            </div>
+
+            <div class="d-flex gap-2 sticky-bottom bg-dark pt-3 mt-5">
+                <button type="button" class="btn btn-primary flex-grow-1 fw-bold" data-bs-dismiss="offcanvas">APPLY</button>
+                <button type="reset" class="btn btn-outline-secondary">
+                    <i class="bi bi-arrow-counterclockwise"></i>
+                </button>
+            </div>
+        </form>
+    </div>
+</div>
+
+
+
+
+
+
+
+  
 
 
   <div class="container my-5">
@@ -20,6 +112,11 @@
 
     </div>
 </div>
+
+
+
+
+
 
 
   <script src="scripts/add-product.js"></script>

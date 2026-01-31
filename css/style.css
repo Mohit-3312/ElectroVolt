@@ -6,6 +6,7 @@
 }
 
 body {
+  background: #1a1a1a !important;
   min-height: 100vh;
   color: #FFFFFF;
 }
@@ -90,3 +91,25 @@ body {
     border-color: #00d4ff;
     box-shadow: 0 0 10px rgba(0, 212, 255, 0.5);
 }
+
+/* Blurred Background Effect */
+    .offcanvas-backdrop.show {
+        backdrop-filter: blur(8px);
+        background-color: rgba(0, 0, 0, 0.7);
+    }
+
+    /* Custom scrollbar for the filter list */
+    .custom-scrollbar::-webkit-scrollbar {
+        width: 5px;
+    }
+    .custom-scrollbar::-webkit-scrollbar-thumb {
+        background: #333;
+        border-radius: 10px;
+    }
+    
+    /* Modern blue glow for range slider */
+    .custom-range::-webkit-slider-thumb {
+        background: #00d4ff;
+        box-shadow: 0 0 10px rgba(0, 212, 255, 0.5);
+    }
+
