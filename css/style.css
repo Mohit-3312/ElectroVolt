@@ -118,9 +118,7 @@ body {
 .custom-hot-deals {
     display: flex;
     overflow-x: auto;
-    scroll-snap-type: x mandatory; /* The magic for snapping */
-    scrollbar-width: none; /* Hides scrollbar in Firefox */
-    -ms-overflow-style: none; /* Hides scrollbar in IE/Edge */
+    scroll-snap-type: x mandatory; /* in swipe only few images slide*/
 }
 
 /* Hides scrollbar in Chrome/Safari */
@@ -132,8 +130,8 @@ body {
 .deal-item {
     flex: 0 0 auto; /* Prevents images from shrinking */
     width: 85vw;    /* 85% of screen width so the next one "peeks" in */
-    max-width: 500px; /* Limits size on your HP laptop */
-    scroll-snap-align: center; /* Snaps to center */
+    max-width: 500px;
+    scroll-snap-align: center; 
 }
 
 .deal-item img {
@@ -146,4 +144,34 @@ body {
 
 .deal-item img:hover {
     transform: scale(1.02);
+}
+
+/* Deep dark background for the cards */
+.bento-card {
+    background-color: #0b0b0b !important;
+    transition: all 0.4s ;
+}
+
+/* Sublte border glow on hover */
+.bento-card:hover {
+    border-color: #00d4ff !important; /* Your Electric Blue */
+    box-shadow: 0 0 20px rgba(0, 212, 255, 0.15) !important;
+    transform: scale(1.01);
+}
+
+/* Subtle animation for the product image */
+.floating-img {
+    filter: drop-shadow(0 0 15px rgba(0, 212, 255, 0.3));
+    animation: float 3s ease-in-out infinite;
+}
+
+@keyframes float {
+    0% { transform: translateY(0px); }
+    50% { transform: translateY(-10px); }
+    100% { transform: translateY(0px); }
+}
+
+/* This targets the placeholder text specifically */
+.form-control::placeholder {
+    color: #a0a0a0 !important;
 }
