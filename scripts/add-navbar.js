@@ -1,11 +1,7 @@
 const navbarHTML = `
-  <nav class="navbar navbar-expand-lg navbar-dark bg-dark py-lg-0">
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark py-0">
   <div class="container-fluid">
     <p class="navbar-brand text-light fs-3 mt-3 py-lg-0" disabled>Electro<span class="text-primary">Volt</span></p>
-    <form class="d-flex ps-3 gap-3" role="search">
-        <input class="form-control m-auto" type="search" placeholder="Search" aria-label="Search"/>
-        <button class="btn btn-outline-light d-none d-md-flex" type="submit">Search</button>
-      </form>
     <button class="navbar-toggler border-0 shadow-none" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>

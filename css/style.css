@@ -29,6 +29,7 @@ body {
     font-size: 0.9rem !important;
     display: -webkit-box;
     -webkit-line-clamp: 2;
+    line-clamp: 2;
     -webkit-box-orient: vertical;
     overflow: hidden;
   }
@@ -113,3 +114,36 @@ body {
         box-shadow: 0 0 10px rgba(0, 212, 255, 0.5);
     }
 
+/* Container hides the scrollbar but stays scrollable */
+.custom-hot-deals {
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory; /* The magic for snapping */
+    scrollbar-width: none; /* Hides scrollbar in Firefox */
+    -ms-overflow-style: none; /* Hides scrollbar in IE/Edge */
+}
+
+/* Hides scrollbar in Chrome/Safari */
+.custom-hot-deals::-webkit-scrollbar {
+    display: none;
+}
+
+/* Individual Deal Item */
+.deal-item {
+    flex: 0 0 auto; /* Prevents images from shrinking */
+    width: 85vw;    /* 85% of screen width so the next one "peeks" in */
+    max-width: 500px; /* Limits size on your HP laptop */
+    scroll-snap-align: center; /* Snaps to center */
+}
+
+.deal-item img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover; /* Keeps images looking good regardless of ratio */
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.deal-item img:hover {
+    transform: scale(1.02);
+}
