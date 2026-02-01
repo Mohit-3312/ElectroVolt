@@ -1,12 +1,19 @@
-// Change navbar background color on scroll
-window.addEventListener('scroll', function() {
-    const navbar = document.querySelector('.navbar');
-    if (window.scrollY > 50) {
-        navbar.classList.add('bg-dark');
-        navbar.classList.remove('bg-transparent'); // Use if you start with transparent
-    } else {
-        navbar.classList.remove('bg-dark');
-    }
-});
+// Get the button
+let mybutton = document.getElementById("btn-back-to-top");
 
-console.log("ElectroVolt script loaded successfully!");
+// When the user scrolls down 300px from the top, show the button
+window.onscroll = function () {
+  if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
+    mybutton.style.display = "block";
+  } else {
+    mybutton.style.display = "none";
+  }
+};
+
+// When the user clicks on the button, scroll to the top
+mybutton.addEventListener("click", function() {
+  window.scrollTo({
+    top: 0,
+    behavior: "smooth"
+  });
+});
