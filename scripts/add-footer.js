@@ -16,12 +16,12 @@ const footerHTML = `
             <div class="col-lg-2 col-md-6">
                 <h6 class="fw-bold mb-3">Categories</h6>
                 <ul class="list-unstyled small text-secondary">
-                    <li class="mb-2"><a href="#" class="text-decoration-none text-secondary">Laptops</a></li>
-                    <li class="mb-2"><a href="#" class="text-decoration-none text-secondary">Home Appliances</a></li>
-                    <li class="mb-2"><a href="#" class="text-decoration-none text-secondary">Smartphones</a></li>
-                    <li class="mb-2"><a href="#" class="text-decoration-none text-secondary">Gaming Gear</a></li>
-                    <li class="mb-2"><a href="#" class="text-decoration-none text-secondary">Smartwatches</a></li>
-                    <li class="mb-2"><a href="#" class="text-decoration-none text-secondary">Camera</a></li>
+                    <li class="mb-2"><a href="laptop.html" class="text-decoration-none text-secondary">Laptops</a></li>
+                    <li class="mb-2"><a href="home-appliances.html" class="text-decoration-none text-secondary">Home Appliances</a></li>
+                    <li class="mb-2"><a href="mobile.html" class="text-decoration-none text-secondary">Smartphones</a></li>
+                    <li class="mb-2"><a href="gaming-gadget.html" class="text-decoration-none text-secondary">Gaming Gear</a></li>
+                    <li class="mb-2"><a href="smartwatch.html" class="text-decoration-none text-secondary">Smartwatches</a></li>
+                    <li class="mb-2"><a href="camera.html" class="text-decoration-none text-secondary">Camera</a></li>
                 </ul>
             </div>
 
@@ -38,7 +38,7 @@ const footerHTML = `
             <div class="col-lg-4 col-md-6">
                 <h6 class="fw-bold mb-3">Get in Touch</h6>
                 <p class="small text-secondary mb-2"><i class="bi bi-geo-alt text-info me-2"></i> Junagadh / Jetpur</p>
-                <p class="small text-secondary mb-2"><i class="bi bi-envelope text-info me-2"></i> bhutiyamohit6@gmail.com</p>
+                <p class="small text-secondary mb-2"><i class="bi bi-envelope text-info me-2"></i> electrovoltofficial@gmail.com</p>
                 <p class="small text-secondary mb-4"><i class="bi bi-telephone text-info me-2"></i> +91 93160 54344</p>
                 
 
