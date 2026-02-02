@@ -199,3 +199,17 @@ body {
   background-color: #fff; /* Turns white on hover for high contrast */
   color: #00d4ff;
 }
+/* Make the input look stealthy */
+#navSearchInput::placeholder {
+    color: #6c757d;
+}
+
+/* Add a subtle glow when the bar opens */
+#searchBarCollapse.show {
+    box-shadow: 0 10px 30px rgba(0, 212, 255, 0.1);
+}
+
+/* Transition speed */
+.collapse {
+    transition: height 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
