@@ -213,3 +213,36 @@ body {
 .collapse {
     transition: height 0.4s cubic-bezier(0.4, 0, 0.2, 1);
 }
+/* Ensure the container allows horizontal scrolling */
+.custom-hot-deals {
+    display: flex !important;
+    flex-wrap: nowrap !important;
+    overflow-x: auto !important;
+    -webkit-overflow-scrolling: touch; /* Smooth for mobile */
+    padding-bottom: 20px !important; /* Extra space so the bar isn't touching the cards */
+    margin-bottom: 20px;
+}
+
+/* Force the scrollbar to show on Desktop */
+@media (min-width: 992px) {
+    .custom-hot-deals::-webkit-scrollbar {
+        height: 10px !important; /* Made it thicker just to test if it shows up */
+        display: block !important;
+    }
+
+    .custom-hot-deals::-webkit-scrollbar-track {
+        background: #1a1a1a !important; 
+        border-radius: 10px;
+    }
+
+    .custom-hot-deals::-webkit-scrollbar-thumb {
+        background: #00d4ff !important; /* Electric Blue */
+        border-radius: 10px;
+        border: 2px solid #1a1a1a; /* Adds a little gap around the thumb */
+    }
+
+    /* Highlight on hover */
+    .custom-hot-deals::-webkit-scrollbar-thumb:hover {
+        background: #008fb3 !important;
+    }
+}
