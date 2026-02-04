@@ -17,3 +17,8 @@ mybutton.addEventListener("click", function() {
     behavior: "smooth"
   });
 });
+// Inside your navbar.js, after innerHTML injection:
+const authModalEl = document.getElementById('authModal');
+if (authModalEl) {
+    new bootstrap.Modal(authModalEl);
+}
