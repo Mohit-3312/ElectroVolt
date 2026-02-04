@@ -246,3 +246,20 @@ body {
         background: #008fb3 !important;
     }
 }
+.modal-content {
+    backdrop-filter: blur(15px);
+    background-color: rgba(10, 10, 10, 0.9) !important;
+}
+
+.nav-pills .nav-link.active {
+    background-color: #00d4ff !important;
+    color: #000 !important;
+    font-weight: bold;
+}
+
+.modal-body input:focus {
+    background-color: #000 !important;
+    border-color: #00d4ff !important;
+    box-shadow: 0 0 10px rgba(0, 212, 255, 0.3) !important;
+    color: white !important;
+}

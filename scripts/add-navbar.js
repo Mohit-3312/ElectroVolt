@@ -53,7 +53,9 @@ const navbarHTML = `
           <a class="nav-link text-light rounded-4" href="about-us.html">About Us</a>
         </li>
       </ul>
-      <button type="button" class="btn btn-outline-light mt-lg-0 mt-3 px-4">Sign Up</button>
+      <button type="button" class="btn btn-outline-light mt-lg-0 mt-3 px-4" data-bs-toggle="modal" data-bs-target="#authModal">
+  Sign Up
+</button>
     </div>
   </div>
 </nav>
@@ -70,6 +72,49 @@ const navbarHTML = `
       <button class="btn btn-outline-secondary ms-2" type="button" data-bs-toggle="collapse" data-bs-target="#searchBarCollapse">
         <i class="bi bi-x-lg"></i>
       </button>
+    </div>
+  </div>
+</div>
+
+<div class="modal fade" id="authModal" tabindex="-1" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content bg-dark border border-secondary rounded-4 shadow-lg">
+      <div class="modal-header border-0 pb-0">
+        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body p-5 pt-0">
+        <div class="text-center mb-4">
+          <h2 class="fw-bold text-white">ELECTRO<span class="text-info">VOLT</span></h2>
+         
+        </div>
+        
+        <ul class="nav nav-pills nav-fill mb-4 bg-black rounded-3 p-1" id="pills-tab" role="tablist">
+          <li class="nav-item">
+            <button class="nav-link active text-white" id="pills-login-tab" data-bs-toggle="pill" data-bs-target="#pills-login" type="button">Log In</button>
+          </li>
+          <li class="nav-item">
+            <button class="nav-link text-white" id="pills-register-tab" data-bs-toggle="pill" data-bs-target="#pills-register" type="button">Register</button>
+          </li>
+        </ul>
+
+        <div class="tab-content" id="pills-tabContent">
+          <div class="tab-pane fade show active" id="pills-login">
+            <form id="loginForm">
+              <input type="email" class="form-control bg-black border-secondary text-white mb-3" placeholder="Email Address" required>
+              <input type="password" class="form-control bg-black border-secondary text-white mb-4" placeholder="Password" required>
+              <button type="submit" class="btn btn-info w-100 fw-bold">Login</button>
+            </form>
+          </div>
+          <div class="tab-pane fade" id="pills-register">
+            <form id="registerForm">
+              <input type="text" class="form-control bg-black border-secondary text-white mb-3" placeholder="Full Name" required>
+              <input type="email" class="form-control bg-black border-secondary text-white mb-3" placeholder="Email Address" required>
+              <input type="password" class="form-control bg-black border-secondary text-white mb-4" placeholder="Create Password" required>
+              <button type="submit" class="btn btn-info w-100 fw-bold">CREATE ACCOUNT</button>
+            </form>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 </div>
