@@ -47,7 +47,7 @@ const footerHTML = `
 
         <div class="d-flex justify-content-between align-items-center small text-secondary">
             <p class="mb-0 text-left">&copy; 2026 ElectroVolt. All Rights Reserved.</p>
-            <p class="mb-0">Designed by <span class="text-info">Mohit,Dhruvit,Divyesh</span></p>
+            <p class="mb-0">Designed by <span class="text-info">Divyesh,Mohit,Dhruvit</span></p>
         </div>
     </div>
 </footer>
