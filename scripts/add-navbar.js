@@ -100,16 +100,21 @@ const navbarHTML = `
         <div class="tab-content" id="pills-tabContent">
           <div class="tab-pane fade show active" id="pills-login">
             <form id="loginForm">
-              <input type="email" class="form-control bg-black border-secondary text-white mb-3" placeholder="Email Address" required>
-              <input type="password" class="form-control bg-black border-secondary text-white mb-4" placeholder="Password" required>
+              <p class="text-white form-label ms-1">Email</p>
+              <input type="email" class="form-control bg-black border-secondary text-white mb-3" placeholder="Enter Your Email" required>
+              <p class="text-white form-label ms-1">Password</p>
+              <input type="password" class="form-control bg-black border-secondary text-white mb-4" placeholder="Enter Your Password" required>
               <button type="submit" class="btn btn-info w-100 fw-bold">Login</button>
             </form>
           </div>
           <div class="tab-pane fade" id="pills-register">
             <form id="registerForm">
-              <input type="text" class="form-control bg-black border-secondary text-white mb-3" placeholder="Full Name" required>
-              <input type="email" class="form-control bg-black border-secondary text-white mb-3" placeholder="Email Address" required>
-              <input type="password" class="form-control bg-black border-secondary text-white mb-4" placeholder="Create Password" required>
+              <p class="text-white form-label ms-1">Email</p>
+              <input type="email" class="form-control bg-black border-secondary text-white mb-3" placeholder="Enter Your Email" required>
+              <p class="text-white form-label ms-1">Password</p>
+              <input type="email" class="form-control bg-black border-secondary text-white mb-3" placeholder="Enter Your Password" required>
+              <p class="text-white form-label ms-1">Confirm Password</p>
+              <input type="password" class="form-control bg-black border-secondary text-white mb-4" placeholder="Confirm Password" required>
               <button type="submit" class="btn btn-info w-100 fw-bold">CREATE ACCOUNT</button>
             </form>
           </div>
