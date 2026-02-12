@@ -47,7 +47,7 @@ const navbarHTML = `
           </ul>
         </li>
         <li class="nav-item">
-          <a class="nav-link text-light rounded-4" href="order.html">Order</a>
+          <a class="nav-link text-light rounded-4" href="cart.html">Cart</a>
         </li>
         <li class="nav-item">
           <a class="nav-link text-light rounded-4" href="about-us.html">About Us</a>

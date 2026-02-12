@@ -263,3 +263,29 @@ body {
     box-shadow: 0 0 10px rgba(0, 212, 255, 0.3) !important;
     color: white !important;
 }
+/* Custom scrollbar for cart items container */
+.cart-items-container::-webkit-scrollbar {
+    width: 4px;
+}
+.cart-items-container::-webkit-scrollbar-track {
+    background: transparent;
+}
+.cart-items-container::-webkit-scrollbar-thumb {
+    background: #00d4ff;
+    border-radius: 10px;
+}
+
+/* Hover effect for item cards */
+.card.bg-dark {
+    transition: all 0.3s ease;
+}
+.card.bg-dark:hover {
+    border-color: #00d4ff !important;
+    background-color: #1a1a1a !important;
+}
+
+/* Quantity buttons glow */
+.btn-group .btn-dark:hover {
+    background-color: #00d4ff !important;
+    color: black !important;
+}

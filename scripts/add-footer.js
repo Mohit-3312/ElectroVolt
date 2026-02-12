@@ -1,4 +1,17 @@
 const footerHTML = `
+<div class="fixed-bottom bg-black border-top border-secondary p-3 d-lg-none shadow-lg" style="z-index: 1050;">
+    <div class="container">
+        <div class="d-flex justify-content-between align-items-center mb-2">
+            <span class="text-secondary small">Total Amount</span>
+            <h4 class="text-info mb-0 final-total">₹0</h4>
+        </div>
+        <button class="btn btn-info w-100 fw-bold py-2 rounded-3">
+            PLACE ORDER <i class="bi bi-arrow-right ms-2"></i>
+        </button>
+    </div>
+</div>
+
+<div class="d-block d-lg-none" style="height: 120px;"></div>
   <footer class="bg-black text-white py-5 border-top border-secondary mt-5">
     <div class="container">
         <div class="row g-4">
