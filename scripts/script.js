@@ -48,7 +48,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
         // Handle Remove
         if (isRemove) {
-            if(confirm("Remove this item from your circuit?")) {
+            if(confirm("Remove this item from your Cart?")) {
                 e.target.closest('.cart-item-row').remove();
                 updateOrderSummary();
             }
