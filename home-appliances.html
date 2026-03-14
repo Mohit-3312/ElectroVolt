@@ -1,0 +1,568 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Home Appliances</title>
+  <link rel="stylesheet" href="css/navbar.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="bootstrap/bootstrap.min.css">
+  <link rel="stylesheet" href="bootstrap/bootstrap-icons.min.css">
+</head>
+<body>
+
+
+  <!--            Added Navbar Using Javascript                        -->
+  <div id="navbar-holder"></div>
+
+
+
+ 
+<!--            Added filter Using bootstrap                        -->
+
+<div class="container mt-4">
+    <button class="btn btn-outline-info shadow-sm d-flex align-items-center fw-bold" type="button" data-bs-toggle="offcanvas" data-bs-target="#filterMenu">
+        <i class="bi bi-funnel-fill me-2"></i> OPEN FILTERS
+    </button>
+</div>
+
+<div class="offcanvas offcanvas-start bg-dark text-white shadow-lg" tabindex="-1" id="filterMenu" style="width: 320px; z-index: 1060; border-right: 1px solid #333;">
+    
+    <div class="offcanvas-header border-bottom border-secondary">
+        <h5 class="offcanvas-title fw-bold text-info"><i class="bi bi-sliders2-vertical me-2"></i>Refine Products</h5>
+        <button type="button" class="btn-close btn-close-black" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+    </div>
+
+    <div class="offcanvas-body custom-scrollbar          
+            <h6 class="text-info fw-bold mb-3">Appliance Type</h6>
+            <div class="filter-group mb-4">
+                <div class="form-check mb-2"><input class="form-check-input" type="checkbox" value="tv" id="f-tv"><label class="form-check-label" for="f-tv">Smart TVs</label></div>
+                <div class="form-check mb-2"><input class="form-check-input" type="checkbox" value="fridge" id="f-fridge"><label class="form-check-label" for="f-fridge">Refrigerators</label></div>
+                <div class="form-check mb-2"><input class="form-check-input" type="checkbox" value="wm" id="f-wm"><label class="form-check-label" for="f-wm">Washing Machines</label></div>
+                <div class="form-check mb-2"><input class="form-check-input" type="checkbox" value="ac" id="f-ac"><label class="form-check-label" for="f-ac">Air Conditioners</label></div>
+            </div>
+
+            <h6 class="text-info fw-bold mb-3">Price Range</h6>
+            <div class="mb-4 px-2">
+                <input type="range" class="form-range custom-range" min="0" max="150000" step="1000" id="priceRange">
+                <div class="d-flex justify-content-between small text-secondary">
+                    <span>₹0</span>
+                    <span class="text-white fw-bold">Up to ₹1.5L</span>
+                </div>
+            </div>
+
+            <h6 class="text-info fw-bold mb-3">Top Brands</h6>
+            <div class="filter-group mb-4">
+                <div class="form-check mb-2"><input class="form-check-input" type="checkbox" value="samsung" id="b-samsung"><label class="form-check-label" for="b-samsung">Samsung</label></div>
+                <div class="form-check mb-2"><input class="form-check-input" type="checkbox" value="lg" id="b-lg"><label class="form-check-label" for="b-lg">LG Electronics</label></div>
+                <div class="form-check mb-2"><input class="form-check-input" type="checkbox" value="sony" id="b-sony"><label class="form-check-label" for="b-sony">Sony</label></div>
+                <div class="form-check mb-2"><input class="form-check-input" type="checkbox" value="whirlpool" id="b-whirlpool"><label class="form-check-label" for="b-whirlpool">Whirlpool</label></div>
+            </div>
+
+            <h6 class="text-info fw-bold mb-3">Customer Rating</h6>
+            <div class="mb-4">
+                
+                <div class="form-check mb-2">
+                    <input class="form-check-input" type="radio" name="rating" id="r4">
+                    <label class="form-check-label" for="r4">4 <i class="bi bi-star-fill text-warning"></i> & Above</label>
+                </div>
+                <div class="form-check mb-2">
+                    <input class="form-check-input" type="radio" name="rating" id="r3">
+                    <label class="form-check-label" for="r3">3 <i class="bi bi-star-fill text-warning"></i> & Above</label>
+                </div>
+                <div class="form-check mb-2">
+                    <input class="form-check-input" type="radio" name="rating" id="r3">
+                    <label class="form-check-label" for="r3">2 <i class="bi bi-star-fill text-warning"></i> & Above</label>
+                </div>
+            </div>
+
+            <h6 class="text-info fw-bold mb-3">Energy Rating</h6>
+            <select class="form-select form-select-sm bg-dark text-white border-secondary mb-4">
+                <option selected>All Ratings</option>
+                <option value="5">5 Star (Highly Efficient)</option>
+                <option value="4">4 Star & Above</option>
+                <option value="3">3 Star & Above</option>
+            </select>
+
+            <div class="form-check form-switch mb-4">
+                <input class="form-check-input" type="checkbox" id="stockSwitch" checked>
+                <label class="form-check-label" for="stockSwitch">Show In-Stock Only</label>
+            </div>
+
+            <div class="d-flex gap-2 sticky-bottom bg-dark pt-3 mt-5">
+                <button type="button" class="btn btn-primary flex-grow-1 fw-bold" data-bs-dismiss="offcanvas">APPLY</button>
+                <button type="reset" class="btn btn-outline-secondary">
+                    <i class="bi bi-arrow-counterclockwise"></i>
+                </button>
+            </div>
+        </form>
+    </div>
+</div>
+
+
+
+
+
+
+
+  
+
+
+  <div class="container my-5">
+  <div class="row g-4" id="productHolder">
+
+    <!-- 1 Refrigerator -->
+<div class="col-lg-4 col-md-6 col-12">
+  <div class="card h-100 border-0 shadow-sm bg-dark text-white overflow-hidden product-card">
+      <div class="position-relative">
+          <img src="images/home-appliences/refrigerator1.webp" class="card-img-top p-4" alt="Refrigerator" style="height: 250px; object-fit: contain;">
+      </div>
+      <div class="card-body d-flex flex-column">
+          <div class="d-flex justify-content-between align-items-center mb-2">
+              <small class="text-info fw-bold"><i class="bi bi-patch-check-fill me-1"></i> LG</small>
+              <small class="text-warning"><i class="bi bi-star-fill"></i> 4.5</small>
+          </div>
+          <h5 class="card-title mb-1">Smart Inverter Refrigerator</h5>
+          <p class="card-text text-secondary small flex-grow-1">Energy-efficient cooling for modern homes.</p>
+          <div class="d-flex align-items-center my-3">
+              <span class="fs-4 fw-bold me-2 text-info">₹28,999</span>
+              <span class="text-secondary text-decoration-line-through small">₹34,999</span>
+          </div>
+          <div class="d-grid gap-2 mt-auto">
+              <button class="btn btn-primary fw-bold"><i class="bi bi-cart-plus me-2"></i>Add to Cart</button>
+              <button class="btn btn-outline-light btn-sm"><i class="bi bi-bag me-2"></i>Buy Now</button>
+          </div>
+      </div>
+  </div>
+</div>
+
+<!-- 2 Washing Machine -->
+<div class="col-lg-4 col-md-6 col-12">
+  <div class="card h-100 border-0 shadow-sm bg-dark text-white overflow-hidden product-card">
+      <div class="position-relative">
+          <img src="images/home-appliences/washing_machine2.webp" class="card-img-top p-4" alt="Washing Machine" style="height: 250px; object-fit: contain;">
+      </div>
+      <div class="card-body d-flex flex-column">
+          <div class="d-flex justify-content-between align-items-center mb-2">
+              <small class="text-info fw-bold"><i class="bi bi-patch-check-fill me-1"></i> Samsung</small>
+              <small class="text-warning"><i class="bi bi-star-fill"></i> 4.4</small>
+          </div>
+          <h5 class="card-title mb-1">Automatic Washing Machine</h5>
+          <p class="card-text text-secondary small flex-grow-1">Deep clean wash cycles with minimal noise.</p>
+          <div class="d-flex align-items-center my-3">
+              <span class="fs-4 fw-bold me-2 text-info">₹21,499</span>
+              <span class="text-secondary text-decoration-line-through small">₹26,999</span>
+          </div>
+          <div class="d-grid gap-2 mt-auto">
+              <button class="btn btn-primary fw-bold"><i class="bi bi-cart-plus me-2"></i>Add to Cart</button>
+              <button class="btn btn-outline-light btn-sm"><i class="bi bi-bag me-2"></i>Buy Now</button>
+          </div>
+      </div>
+  </div>
+</div>
+
+<!-- 3 Microwave Oven -->
+<div class="col-lg-4 col-md-6 col-12">
+  <div class="card h-100 border-0 shadow-sm bg-dark text-white overflow-hidden product-card">
+      <div class="position-relative">
+          <img src="images/home-appliences/microwave_owen3.png" class="card-img-top p-4" alt="Microwave Oven" style="height: 250px; object-fit: contain;">
+      </div>
+      <div class="card-body d-flex flex-column">
+          <div class="d-flex justify-content-between align-items-center mb-2">
+              <small class="text-info fw-bold"><i class="bi bi-patch-check-fill me-1"></i> IFB</small>
+              <small class="text-warning"><i class="bi bi-star-fill"></i> 4.2</small>
+          </div>
+          <h5 class="card-title mb-1">Microwave Oven</h5>
+          <p class="card-text text-secondary small flex-grow-1">Quick cooking and even heating.</p>
+          <div class="d-flex align-items-center my-3">
+              <span class="fs-4 fw-bold me-2 text-info">₹12,999</span>
+              <span class="text-secondary text-decoration-line-through small">₹15,499</span>
+          </div>
+          <div class="d-grid gap-2 mt-auto">
+              <button class="btn btn-primary fw-bold"><i class="bi bi-cart-plus me-2"></i>Add to Cart</button>
+              <button class="btn btn-outline-light btn-sm"><i class="bi bi-bag me-2"></i>Buy Now</button>
+          </div>
+      </div>
+  </div>
+</div>
+
+<!-- 4 Air Conditioner -->
+<div class="col-lg-4 col-md-6 col-12">
+  <div class="card h-100 border-0 shadow-sm bg-dark text-white overflow-hidden product-card">
+      <div class="position-relative">
+          <img src="images/home-appliences/AC4.webp" class="card-img-top p-4" alt="Air Conditioner" style="height: 250px; object-fit: contain;">
+      </div>
+      <div class="card-body d-flex flex-column">
+          <div class="d-flex justify-content-between align-items-center mb-2">
+              <small class="text-info fw-bold"><i class="bi bi-patch-check-fill me-1"></i> Voltas</small>
+              <small class="text-warning"><i class="bi bi-star-fill"></i> 4.6</small>
+          </div>
+          <h5 class="card-title mb-1">Split AC</h5>
+          <p class="card-text text-secondary small flex-grow-1">Fast cooling with low energy use.</p>
+          <div class="d-flex align-items-center my-3">
+              <span class="fs-4 fw-bold me-2 text-info">₹32,999</span>
+              <span class="text-secondary text-decoration-line-through small">₹39,999</span>
+          </div>
+          <div class="d-grid gap-2 mt-auto">
+              <button class="btn btn-primary fw-bold"><i class="bi bi-cart-plus me-2"></i>Add to Cart</button>
+              <button class="btn btn-outline-light btn-sm"><i class="bi bi-bag me-2"></i>Buy Now</button>
+          </div>
+      </div>
+  </div>
+</div>
+
+<!-- 5 Vacuum Cleaner -->
+<div class="col-lg-4 col-md-6 col-12">
+  <div class="card h-100 border-0 shadow-sm bg-dark text-white overflow-hidden product-card">
+      <div class="position-relative">
+          <img src="images/home-appliences/vacume_cleaner5.png" class="card-img-top p-4" alt="Vacuum Cleaner" style="height: 250px; object-fit: contain;">
+      </div>
+      <div class="card-body d-flex flex-column">
+          <div class="d-flex justify-content-between align-items-center mb-2">
+              <small class="text-info fw-bold"><i class="bi bi-patch-check-fill me-1"></i> Philips</small>
+              <small class="text-warning"><i class="bi bi-star-fill"></i> 4.3</small>
+          </div>
+          <h5 class="card-title mb-1">Bagless Vacuum Cleaner</h5>
+          <p class="card-text text-secondary small flex-grow-1">Powerful suction with HEPA filter.</p>
+          <div class="d-flex align-items-center my-3">
+              <span class="fs-4 fw-bold me-2 text-info">₹8,499</span>
+              <span class="text-secondary text-decoration-line-through small">₹10,999</span>
+          </div>
+          <div class="d-grid gap-2 mt-auto">
+              <button class="btn btn-primary fw-bold"><i class="bi bi-cart-plus me-2"></i>Add to Cart</button>
+              <button class="btn btn-outline-light btn-sm"><i class="bi bi-bag me-2"></i>Buy Now</button>
+          </div>
+      </div>
+  </div>
+</div>
+
+<!-- 6 Water Purifier -->
+<div class="col-lg-4 col-md-6 col-12">
+  <div class="card h-100 border-0 shadow-sm bg-dark text-white overflow-hidden product-card">
+      <div class="position-relative">
+          <img src="images/home-appliences/water_purifiers6.webp" class="card-img-top p-4" alt="Water Purifier" style="height: 250px; object-fit: contain;">
+      </div>
+      <div class="card-body d-flex flex-column">
+          <div class="d-flex justify-content-between align-items-center mb-2">
+              <small class="text-info fw-bold"><i class="bi bi-patch-check-fill me-1"></i> Kent</small>
+              <small class="text-warning"><i class="bi bi-star-fill"></i> 4.4</small>
+          </div>
+          <h5 class="card-title mb-1">RO Water Purifier</h5>
+          <p class="card-text text-secondary small flex-grow-1">Multi-stage filtration technology.</p>
+          <div class="d-flex align-items-center my-3">
+              <span class="fs-4 fw-bold me-2 text-info">₹14,999</span>
+              <span class="text-secondary text-decoration-line-through small">₹18,999</span>
+          </div>
+          <div class="d-grid gap-2 mt-auto">
+              <button class="btn btn-primary fw-bold"><i class="bi bi-cart-plus me-2"></i>Add to Cart</button>
+              <button class="btn btn-outline-light btn-sm"><i class="bi bi-bag me-2"></i>Buy Now</button>
+          </div>
+      </div>
+  </div>
+</div>
+
+
+    <div class="container-fluid my-5">
+    <div class="row justify-content-center">
+        <div class="col-md-10">
+            <div id="electronicsCarousel" class="carousel slide bg-black text-white rounded-4 overflow-hidden shadow-lg border border-secondary" data-bs-ride="carousel">
+                
+                <div class="carousel-indicators">
+                    <button type="button" data-bs-target="#electronicsCarousel" data-bs-slide-to="0" class="active"></button>
+                    <button type="button" data-bs-target="#electronicsCarousel" data-bs-slide-to="1"></button>
+                    <button type="button" data-bs-target="#electronicsCarousel" data-bs-slide-to="2"></button>
+                    <button type="button" data-bs-target="#electronicsCarousel" data-bs-slide-to="3"></button>
+                </div>
+
+                <div class="carousel-inner">
+                    <div class="carousel-item active" style="min-height: 400px;">
+                        <div class="row g-0 h-100 align-items-center">
+                            <div class="col-md-7 p-5">
+                                <span class="badge bg-info text-dark fw-bold mb-3 px-3 py-2">FESTIVE SALE</span>
+                                <h1 class="display-4 fw-bold mb-2">UP TO <span class="text-info">35% OFF</span></h1>
+                                <h3 class="fw-light mb-4">On Premium Smart Refrigerators</h3>
+                                <p class="text-secondary mb-4">Upgrade to AI-powered cooling with 10 years warranty. Starting from ₹45,999.</p>
+                                <button class="btn btn-info btn-lg fw-bold px-5 py-3 rounded-pill shadow">SHOP COLLECTION</button>
+                            </div>
+                            <div class="col-md-5 text-center position-relative">
+                                <div class="carousel-glow"></div>
+                                <img src="images/gaming-gadget/headphone-index.png" class="img-fluid banner-img p-4" alt="Premium Fridge">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="carousel-item" style="min-height: 400px;">
+                        <div class="row g-0 h-100 align-items-center">
+                            <div class="col-md-7 p-5">
+                                <span class="badge bg-warning text-dark fw-bold mb-3 px-3 py-2">NEW ARRIVAL</span>
+                                <h1 class="display-4 fw-bold mb-2">FLAT <span class="text-warning">₹5,000 OFF</span></h1>
+                                <h3 class="fw-light mb-4">On AI Direct Drive Washers</h3>
+                                <p class="text-secondary mb-4">Wash smarter, not harder. Limited period exchange offer available.</p>
+                                <button class="btn btn-warning btn-lg fw-bold px-5 py-3 rounded-pill shadow">VIEW DEALS</button>
+                            </div>
+                            <div class="col-md-5 text-center position-relative">
+                                <div class="carousel-glow-alt"></div>
+                                <img src="images/laptop/laptop-index.png" class="img-fluid banner-img p-4" alt="Washing Machine">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item" style="min-height: 400px;">
+                        <div class="row g-0 h-100 align-items-center">
+                            <div class="col-md-7 p-5">
+                                <span class="badge bg-info text-dark fw-bold mb-3 px-3 py-2">Latest SALE</span>
+                                <h1 class="display-4 fw-bold mb-2">UP TO <span class="text-info">35% OFF</span></h1>
+                                <h3 class="fw-light mb-4">On Premium Smart Refrigerators</h3>
+                                <p class="text-danger mb-4">Upgrade to AI-powered cooling with 10 years warranty. Starting from ₹45,999.</p>
+                                <button class="btn btn-info btn-lg fw-bold px-5 py-3 rounded-pill shadow">SHOP COLLECTION</button>
+                            </div>
+                            <div class="col-md-5 text-center position-relative">
+                                <div class="carousel-glow"></div>
+                                <img src="images/watches/watch-index.png" class="img-fluid banner-img p-4" alt="Premium Fridge">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="carousel-item" style="min-height: 400px;">
+                        <div class="row g-0 h-100 align-items-center">
+                            <div class="col-md-7 p-5">
+                                <span class="badge bg-warning text-dark fw-bold mb-3 px-3 py-2">NEW ARRIVAL</span>
+                                <h1 class="display-4 fw-bold mb-2">FLAT <span class="text-warning">₹5,000 OFF</span></h1>
+                                <h3 class="fw-light mb-4">On AI Direct Drive Washers</h3>
+                                <p class="text-warning mb-4">Wash smarter, not harder. Limited period exchange offer available.</p>
+                                <button class="btn btn-warning btn-lg fw-bold px-5 py-3 rounded-pill shadow">VIEW DEALS</button>
+                            </div>
+                            <div class="col-md-5 text-center position-relative">
+                                <div class="carousel-glow-alt"></div>
+                                <img src="images/mobile/mobile-index.png" class="img-fluid banner-img p-4" alt="Washing Machine">
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <button class="carousel-control-prev" type="button" data-bs-target="#electronicsCarousel" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon opacity-50"></span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#electronicsCarousel" data-bs-slide="next">
+                    <span class="carousel-control-next-icon opacity-50"></span>
+                </button>
+                
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- 1.Smart TV-->
+ <div class="col-lg-4 col-md-6 col-12">
+    <div class="card h-100 border-0 shadow-sm bg-dark text-white overflow-hidden product-card">
+        <div class="position-relative">
+            <img src="images/home-appliences/mi_tv7.webp" class="card-img-top p-4" alt="Mi Smart TV" style="height: 250px; object-fit: contain;">
+        </div>
+        <div class="card-body d-flex flex-column">
+            <div class="d-flex justify-content-between align-items-center mb-2">
+                <small class="text-info fw-bold"><i class="bi bi-patch-check-fill me-1"></i> Xiaomi</small>
+                <small class="text-warning"><i class="bi bi-star-fill"></i> 4.6</small>
+            </div>
+            <h5 class="card-title mb-1">50” 4K Android Smart TV</h5>
+            <p class="card-text text-secondary small flex-grow-1">
+                Ultra HD 4K resolution with Dolby Audio, built-in Chromecast and voice control support.
+            </p>
+            <div class="d-flex align-items-center my-3">
+                <span class="fs-4 fw-bold me-2 text-info">₹39,999</span>
+                <span class="text-secondary text-decoration-line-through small">₹45,999</span>
+            </div>
+            <div class="d-grid gap-2 mt-auto">
+                <button class="btn btn-primary fw-bold"><i class="bi bi-cart-plus me-2"></i>Add to Cart</button>
+                <button class="btn btn-outline-light btn-sm"><i class="bi bi-bag me-2"></i>Buy Now</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- 2.Air Cooler-->
+<div class="col-lg-4 col-md-6 col-12">
+    <div class="card h-100 border-0 shadow-sm bg-dark text-white overflow-hidden product-card">
+        <div class="position-relative">
+            <img src="images/home-appliences/air_cooler8.webp" 
+                 class="card-img-top p-4" 
+                 alt="Bajaj Air Cooler" 
+                 style="height: 250px; object-fit: contain;">
+        </div>
+        <div class="card-body d-flex flex-column">
+            <div class="d-flex justify-content-between align-items-center mb-2">
+                <small class="text-info fw-bold"><i class="bi bi-patch-check-fill me-1"></i> Bajaj</small>
+                <small class="text-warning"><i class="bi bi-star-fill"></i> 4.2</small>
+            </div>
+            <h5 class="card-title mb-1">Desert Air Cooler</h5>
+            <p class="card-text text-secondary small flex-grow-1">
+                High-performance desert cooler with honeycomb pads and large water tank capacity.
+            </p>
+            <div class="d-flex align-items-center my-3">
+                <span class="fs-4 fw-bold me-2 text-info">₹11,499</span>
+                <span class="text-secondary text-decoration-line-through small">₹14,000</span>
+            </div>
+            <div class="d-grid gap-2 mt-auto">
+                <button class="btn btn-primary fw-bold"><i class="bi bi-cart-plus me-2"></i>Add to Cart</button>
+                <button class="btn btn-outline-light btn-sm"><i class="bi bi-bag me-2"></i>Buy Now</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- 3.Fan-->
+<div class="col-lg-4 col-md-6 col-12">
+    <div class="card h-100 border-0 shadow-sm bg-dark text-white overflow-hidden product-card">
+        <div class="position-relative">
+            <img src="images/home-appliences/fan9.webp" 
+                 class="card-img-top p-4" 
+                 alt="Havells Ceiling Fan" 
+                 style="height: 250px; object-fit: contain;">
+        </div>
+        <div class="card-body d-flex flex-column">
+            <div class="d-flex justify-content-between align-items-center mb-2">
+                <small class="text-info fw-bold"><i class="bi bi-patch-check-fill me-1"></i> Havells</small>
+                <small class="text-warning"><i class="bi bi-star-fill"></i> 4.3</small>
+            </div>
+            <h5 class="card-title mb-1">1200mm Energy Saver Fan</h5>
+            <p class="card-text text-secondary small flex-grow-1">
+                High-speed ceiling fan with aerodynamic blades and energy-efficient motor.
+            </p>
+            <div class="d-flex align-items-center my-3">
+                <span class="fs-4 fw-bold me-2 text-info">₹3,299</span>
+                <span class="text-secondary text-decoration-line-through small">₹4,200</span>
+            </div>
+            <div class="d-grid gap-2 mt-auto">
+                <button class="btn btn-primary fw-bold"><i class="bi bi-cart-plus me-2"></i>Add to Cart</button>
+                <button class="btn btn-outline-light btn-sm"><i class="bi bi-bag me-2"></i>Buy Now</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- 4.Mixer Grinder-->
+<div class="col-lg-4 col-md-6 col-12">
+    <div class="card h-100 border-0 shadow-sm bg-dark text-white overflow-hidden product-card">
+        <div class="position-relative">
+            <img src="images/home-appliences/mixer10.webp" 
+                 class="card-img-top p-4" 
+                 alt="Preethi Mixer Grinder" 
+                 style="height: 250px; object-fit: contain;">
+        </div>
+        <div class="card-body d-flex flex-column">
+            <div class="d-flex justify-content-between align-items-center mb-2">
+                <small class="text-info fw-bold"><i class="bi bi-patch-check-fill me-1"></i> Preethi</small>
+                <small class="text-warning"><i class="bi bi-star-fill"></i> 4.4</small>
+            </div>
+            <h5 class="card-title mb-1">750W Mixer Grinder</h5>
+            <p class="card-text text-secondary small flex-grow-1">
+                Powerful 750W motor with stainless steel jars for grinding, blending, and chutney making.
+            </p>
+            <div class="d-flex align-items-center my-3">
+                <span class="fs-4 fw-bold me-2 text-info">₹4,999</span>
+                <span class="text-secondary text-decoration-line-through small">₹6,200</span>
+            </div>
+            <div class="d-grid gap-2 mt-auto">
+                <button class="btn btn-primary fw-bold"><i class="bi bi-cart-plus me-2"></i>Add to Cart</button>
+                <button class="btn btn-outline-light btn-sm"><i class="bi bi-bag me-2"></i>Buy Now</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- 5.Water Heater-->
+<div class="col-lg-4 col-md-6 col-12">
+    <div class="card h-100 border-0 shadow-sm bg-dark text-white overflow-hidden product-card">
+        <div class="position-relative">
+            <img src="images/home-appliences/water_heater11.webp" 
+                 class="card-img-top p-4" 
+                 alt="Racold Water Heater" 
+                 style="height: 250px; object-fit: contain;">
+        </div>
+        <div class="card-body d-flex flex-column">
+            <div class="d-flex justify-content-between align-items-center mb-2">
+                <small class="text-info fw-bold"><i class="bi bi-patch-check-fill me-1"></i> Racold</small>
+                <small class="text-warning"><i class="bi bi-star-fill"></i> 4.5</small>
+            </div>
+            <h5 class="card-title mb-1">25L Storage Water Heater</h5>
+            <p class="card-text text-secondary small flex-grow-1">
+                Titanium enamel coated tank with fast heating element and advanced safety features.
+            </p>
+            <div class="d-flex align-items-center my-3">
+                <span class="fs-4 fw-bold me-2 text-info">₹8,990</span>
+                <span class="text-secondary text-decoration-line-through small">₹10,500</span>
+            </div>
+            <div class="d-grid gap-2 mt-auto">
+                <button class="btn btn-primary fw-bold"><i class="bi bi-cart-plus me-2"></i>Add to Cart</button>
+                <button class="btn btn-outline-light btn-sm"><i class="bi bi-bag me-2"></i>Buy Now</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- 6.Vacuum Cleaner-->
+<div class="col-lg-4 col-md-6 col-12">
+    <div class="card h-100 border-0 shadow-sm bg-dark text-white overflow-hidden product-card">
+        <div class="position-relative">
+            <img src="images/home-appliences/cleaner12.webp" 
+                 class="card-img-top p-4" 
+                 alt="Eureka Forbes Vacuum Cleaner" 
+                 style="height: 250px; object-fit: contain;">
+        </div>
+        <div class="card-body d-flex flex-column">
+            <div class="d-flex justify-content-between align-items-center mb-2">
+                <small class="text-info fw-bold"><i class="bi bi-patch-check-fill me-1"></i> Eureka Forbes</small>
+                <small class="text-warning"><i class="bi bi-star-fill"></i> 4.3</small>
+            </div>
+            <h5 class="card-title mb-1">Bagless Vacuum Cleaner</h5>
+            <p class="card-text text-secondary small flex-grow-1">
+                Powerful suction vacuum cleaner with HEPA filter and multi-surface cleaning support.
+            </p>
+            <div class="d-flex align-items-center my-3">
+                <span class="fs-4 fw-bold me-2 text-info">₹7,499</span>
+                <span class="text-secondary text-decoration-line-through small">₹9,000</span>
+            </div>
+            <div class="d-grid gap-2 mt-auto">
+                <button class="btn btn-primary fw-bold"><i class="bi bi-cart-plus me-2"></i>Add to Cart</button>
+                <button class="btn btn-outline-light btn-sm"><i class="bi bi-bag me-2"></i>Buy Now</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+  
+    
+
+
+
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+<button type="button" class="btn btn-info btn-back-to-top shadow" id="btn-back-to-top">
+  <i class="bi bi-arrow-up"></i>
+</button>
+<div id="footerHolder"></div>
+
+
+-to-top">
+  <i class="bi bi-arrow-up"></i>
+</button>
+<div id="footerHolder"></div>
+
+
+<script src="scripts/script.js"></script>
+ <script src="scripts/add-footer.js"></script>
+  <script src="bootstrap/bootstrap.bundle.min.js"></script>
+  <script src="scripts/add-navbar.js"></script>
+
+</body>
+</html>

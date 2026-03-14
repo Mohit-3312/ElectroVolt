@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Feedback</title>
+    <link rel="stylesheet" href="css/navbar.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="bootstrap/bootstrap.min.css">
+  <link rel="stylesheet" href="bootstrap/bootstrap-icons.min.css">
+</head>
+<body>
+<div class="container my-5">
+  <div class="row justify-content-center">
+    <div class="col-lg-8 col-md-10">
+      <div class="card bg-dark text-light shadow-lg border-0">
+        
+        <!-- Header -->
+        <div class="card-header bg-black text-center border-bottom border-secondary">
+          <h4 class="mb-0 text-info">
+            <i class="bi bi-chat-dots-fill"></i> Customer Feedback
+          </h4>
+        </div>
+
+        <div class="card-body p-4">
+
+          <form action="index.html">
+
+            <!-- Name -->
+            <div class="mb-3">
+              <label class="form-label">Full Name</label>
+              <input type="text" 
+                     class="form-control bg-secondary text-light border-0" 
+                     placeholder="Enter your full name" required>
+            </div>
+
+            <!-- Email -->
+            <div class="mb-3">
+              <label class="form-label">Email Address</label>
+              <input type="email" 
+                     class="form-control bg-secondary text-light border-0" 
+                     placeholder="Enter your email" required>
+            </div>
+
+            <!-- Order ID -->
+            <div class="mb-3">
+              <label class="form-label">Order ID</label>
+              <input type="text" 
+                     class="form-control bg-secondary text-light border-0" 
+                     placeholder="Enter your order ID">
+            </div>
+
+            <!-- Rating -->
+            <div class="mb-3">
+              <label class="form-label">Rate Your Experience</label>
+              <select class="form-select bg-secondary text-light border-0">
+                <option selected disabled>Select rating</option>
+                <option>⭐⭐⭐⭐⭐ - Excellent</option>
+                <option>⭐⭐⭐⭐ - Very Good</option>
+                <option>⭐⭐⭐ - Good</option>
+                <option>⭐⭐ - Fair</option>
+                <option>⭐ - Poor</option>
+              </select>
+            </div>
+
+            <!-- Feedback Message -->
+            <div class="mb-3">
+              <label class="form-label">Your Feedback</label>
+              <textarea class="form-control bg-secondary text-light border-0" 
+                        rows="4" 
+                        placeholder="Write your feedback here..." 
+                        required></textarea>
+            </div>
+
+            <!-- Recommend -->
+            <div class="mb-4">
+              <label class="form-label">Would you recommend us?</label>
+
+              <div class="form-check">
+                <input class="form-check-input bg-secondary border-0" 
+                       type="radio" name="recommend" id="yes">
+                <label class="form-check-label" for="yes">Yes</label>
+              </div>
+
+              <div class="form-check">
+                <input class="form-check-input bg-secondary border-0" 
+                       type="radio" name="recommend" id="no">
+                <label class="form-check-label" for="no">No</label>
+              </div>
+            </div>
+
+            <!-- Submit Button -->
+            <div class="d-grid gap-2">
+  <button type="submit" class="btn btn-info">
+    <i class="bi bi-send-fill"></i> Submit Feedback
+  </button>
+
+  <a href="index.html" class="btn btn-outline-light">
+    <i class="bi bi-house-fill"></i> Go Back Home
+  </a>
+</div>
+
+
+          </form>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+  
+
+
+
+<script src="scripts/script.js"></script>
+ <script src="scripts/add-footer.js"></script>
+  <script src="bootstrap/bootstrap.bundle.min.js"></script>
+  <script src="scripts/add-navbar.js"></script>
+
+</body>
+</html>

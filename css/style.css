@@ -1,0 +1,303 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+html{
+  scroll-behavior: smooth;
+}
+
+body {
+  background: #1a1a1a !important;
+  min-height: 100vh;
+  color: #FFFFFF;
+}
+
+/* Add this to your CSS file */
+@media (max-width: 768px) {
+  /* Fix the Hero height for mobile */
+  .carousel-item {
+    height: 45vh !important; 
+    min-height: 300px !important;
+  }
+
+  /* Shrink the massive headings */
+  .carousel-caption h1 {
+    font-size: 1.8rem !important;
+  }
+
+  /* Hide the lead text on very small screens to save space */
+  .carousel-caption p {
+    font-size: 0.9rem !important;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+}
+
+/* Smooth mobile adjustment */
+@media (max-width: 768px) {
+    .hero-gradient-mask {
+        height: 70%; /* Higher fade on mobile looks cleaner with stacked text */
+    }
+}
+.card-custom{
+  background: #2c3034 !important;
+  transition: all 0.5s;
+  border: 1px solid #333;
+  margin-bottom: 20px;
+  color: #ffffff !important;
+}
+.card-custom:hover{
+  background: linear-gradient(rgb(44, 43, 43),black) !important;
+  border-color: #343a40;
+  box-shadow: 0 10px 30px rgba(0, 212, 255, 0.3) !important; 
+  transform: translateY(-5px);
+}
+.card-img-top{
+  transition: all 0.5s ease-out;
+}
+.card-img-top:hover{
+  transform: scale(1.05);
+}
+
+.card a{
+  color: rgba(0, 0, 255, 0.501) !important;
+}
+.card-body a{
+  color: #00d4ff !important;
+}
+
+/* This connects to the custom class we added to the HTML */
+.product-card {
+    transition: all 0.3s ease;
+    border: 1px solid #333 !important; /* Subtle border for dark mode */
+}
+
+.product-card:hover {
+    transform: translateY(-8px);
+    border-color: #00d4ff !important; /* Electric blue border */
+    box-shadow: 0 10px 20px rgba(0, 212, 255, 0.2) !important;
+}
+
+/* This targets the image inside our custom card specifically */
+.product-card:hover img {
+    transform: scale(1.05);
+    transition: 0.3s ease;
+}
+
+/* This makes the button glow when the card is hovered */
+.product-card .btn-primary:hover {
+    background-color: #00d4ff;
+    border-color: #00d4ff;
+    box-shadow: 0 0 10px rgba(0, 212, 255, 0.5);
+}
+
+/* Blurred Background Effect */
+    .offcanvas-backdrop.show {
+        backdrop-filter: blur(8px);
+        background-color: rgba(0, 0, 0, 0.7);
+    }
+
+    /* Custom scrollbar for the filter list */
+    .custom-scrollbar::-webkit-scrollbar {
+        width: 5px;
+    }
+    .custom-scrollbar::-webkit-scrollbar-thumb {
+        background: #333;
+        border-radius: 10px;
+    }
+    
+    /* Modern blue glow for range slider */
+    .custom-range::-webkit-slider-thumb {
+        background: #00d4ff;
+        box-shadow: 0 0 10px rgba(0, 212, 255, 0.5);
+    }
+
+/* Container hides the scrollbar but stays scrollable */
+.custom-hot-deals {
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory; /* in swipe only few images slide*/
+}
+
+/* Hides scrollbar in Chrome/Safari */
+.custom-hot-deals::-webkit-scrollbar {
+    display: none;
+}
+
+/* Individual Deal Item */
+.deal-item {
+    flex: 0 0 auto; /* Prevents images from shrinking */
+    width: 85vw;    /* 85% of screen width so the next one "peeks" in */
+    max-width: 500px;
+    scroll-snap-align: center; 
+}
+
+.deal-item img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover; /* Keeps images looking good regardless of ratio */
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.deal-item img:hover {
+    transform: scale(1.02);
+}
+
+/* Deep dark background for the cards */
+.bento-card {
+    background-color: #0b0b0b !important;
+    transition: all 0.4s ;
+}
+
+/* Sublte border glow on hover */
+.bento-card:hover {
+    border-color: #00d4ff !important; /* Your Electric Blue */
+    box-shadow: 0 0 20px rgba(0, 212, 255, 0.15) !important;
+    transform: scale(1.01);
+}
+
+/* Subtle animation for the product image */
+.floating-img {
+    filter: drop-shadow(0 0 15px rgba(0, 212, 255, 0.3));
+    animation: float 3s ease-in-out infinite;
+}
+
+@keyframes float {
+    0% { transform: translateY(0px); }
+    50% { transform: translateY(-10px); }
+    100% { transform: translateY(0px); }
+}
+
+/* This targets the placeholder text specifically */
+.form-control::placeholder {
+    color: #a0a0a0 !important;
+}
+
+.btn-back-to-top {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  display: none; /* Hidden by default */
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  z-index: 1000;
+  transition: all 0.3s ease;
+  border: none;
+  box-shadow: 0 0 15px rgba(0, 212, 255, 0.4) !important;
+}
+
+.btn-back-to-top:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 0 25px rgba(0, 212, 255, 0.7) !important;
+  background-color: #fff; /* Turns white on hover for high contrast */
+  color: #00d4ff;
+}
+/* Make the input look stealthy */
+#navSearchInput::placeholder {
+    color: #6c757d;
+}
+
+/* Add a subtle glow when the bar opens */
+#searchBarCollapse.show {
+    box-shadow: 0 10px 30px rgba(0, 212, 255, 0.1);
+}
+
+/* Transition speed */
+.collapse {
+    transition: height 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+/* Ensure the container allows horizontal scrolling */
+.custom-hot-deals {
+    display: flex !important;
+    flex-wrap: nowrap !important;
+    overflow-x: auto !important;
+    -webkit-overflow-scrolling: touch; /* Smooth for mobile */
+    padding-bottom: 20px !important; /* Extra space so the bar isn't touching the cards */
+    margin-bottom: 20px;
+}
+
+/* Force the scrollbar to show on Desktop */
+@media (min-width: 992px) {
+    .custom-hot-deals::-webkit-scrollbar {
+        height: 10px !important; /* Made it thicker just to test if it shows up */
+        display: block !important;
+    }
+
+    .custom-hot-deals::-webkit-scrollbar-track {
+        background: #1a1a1a !important; 
+        border-radius: 10px;
+    }
+
+    .custom-hot-deals::-webkit-scrollbar-thumb {
+        background: #00d4ff !important; /* Electric Blue */
+        border-radius: 10px;
+        border: 2px solid #1a1a1a; /* Adds a little gap around the thumb */
+    }
+
+    /* Highlight on hover */
+    .custom-hot-deals::-webkit-scrollbar-thumb:hover {
+        background: #008fb3 !important;
+    }
+}
+.modal-content {
+    backdrop-filter: blur(15px);
+    background-color: rgba(10, 10, 10, 0.9) !important;
+}
+
+.nav-pills .nav-link.active {
+    background-color: #00d4ff !important;
+    color: #000 !important;
+    font-weight: bold;
+}
+
+.modal-body input:focus {
+    background-color: #000 !important;
+    border-color: #00d4ff !important;
+    box-shadow: 0 0 10px rgba(0, 212, 255, 0.3) !important;
+    color: white !important;
+}
+/* Custom scrollbar for cart items container */
+.cart-items-container::-webkit-scrollbar {
+    width: 4px;
+}
+.cart-items-container::-webkit-scrollbar-track {
+    background: transparent;
+}
+.cart-items-container::-webkit-scrollbar-thumb {
+    background: #00d4ff;
+    border-radius: 10px;
+}
+
+/* Hover effect for item cards */
+.card.bg-dark {
+    transition: all 0.3s ease;
+}
+.card.bg-dark:hover {
+    border-color: #00d4ff !important;
+    background-color: #1a1a1a !important;
+}
+
+/* Quantity buttons glow */
+.btn-group .btn-dark:hover {
+    background-color: #00d4ff !important;
+    color: black !important;
+}
+#priceDetailCollapse {
+    background: rgba(18, 18, 18, 0.98);
+}
+
+/* Rotate the arrow when open */
+[aria-expanded="true"] i {
+    transform: rotate(180deg);
+}
+
+.x-small {
+    font-size: 0.75rem;
+}

@@ -1,0 +1,527 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Home Appliances</title>
+  <link rel="stylesheet" href="css/navbar.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="bootstrap/bootstrap.min.css">
+  <link rel="stylesheet" href="bootstrap/bootstrap-icons.min.css">
+</head>
+<body>
+
+
+  <!--            Added Navbar Using Javascript                        -->
+  <div id="navbar-holder"></div>
+
+
+
+ 
+<!--            Added filter Using bootstrap                        -->
+
+<div class="container mt-4">
+    <button class="btn btn-outline-info shadow-sm d-flex align-items-center fw-bold" type="button" data-bs-toggle="offcanvas" data-bs-target="#filterMenu">
+        <i class="bi bi-funnel-fill me-2"></i> OPEN FILTERS
+    </button>
+</div>
+
+<div class="offcanvas offcanvas-start bg-dark text-white shadow-lg" tabindex="-1" id="filterMenu" style="width: 320px; z-index: 1060; border-right: 1px solid #333;">
+    
+    <div class="offcanvas-header border-bottom border-secondary">
+        <h5 class="offcanvas-title fw-bold text-info"><i class="bi bi-sliders2-vertical me-2"></i>Refine Products</h5>
+        <button type="button" class="btn-close btn-close-black" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+    </div>
+
+    <div class="offcanvas-body custom-scrollbar          
+            <h6 class="text-info fw-bold mb-3">Appliance Type</h6>
+            <div class="filter-group mb-4">
+                <div class="form-check mb-2"><input class="form-check-input" type="checkbox" value="tv" id="f-tv"><label class="form-check-label" for="f-tv">Smart TVs</label></div>
+                <div class="form-check mb-2"><input class="form-check-input" type="checkbox" value="fridge" id="f-fridge"><label class="form-check-label" for="f-fridge">Refrigerators</label></div>
+                <div class="form-check mb-2"><input class="form-check-input" type="checkbox" value="wm" id="f-wm"><label class="form-check-label" for="f-wm">Washing Machines</label></div>
+                <div class="form-check mb-2"><input class="form-check-input" type="checkbox" value="ac" id="f-ac"><label class="form-check-label" for="f-ac">Air Conditioners</label></div>
+            </div>
+
+            <h6 class="text-info fw-bold mb-3">Price Range</h6>
+            <div class="mb-4 px-2">
+                <input type="range" class="form-range custom-range" min="0" max="150000" step="1000" id="priceRange">
+                <div class="d-flex justify-content-between small text-secondary">
+                    <span>₹0</span>
+                    <span class="text-white fw-bold">Up to ₹1.5L</span>
+                </div>
+            </div>
+
+            <h6 class="text-info fw-bold mb-3">Top Brands</h6>
+            <div class="filter-group mb-4">
+                <div class="form-check mb-2"><input class="form-check-input" type="checkbox" value="samsung" id="b-samsung"><label class="form-check-label" for="b-samsung">Samsung</label></div>
+                <div class="form-check mb-2"><input class="form-check-input" type="checkbox" value="lg" id="b-lg"><label class="form-check-label" for="b-lg">LG Electronics</label></div>
+                <div class="form-check mb-2"><input class="form-check-input" type="checkbox" value="sony" id="b-sony"><label class="form-check-label" for="b-sony">Sony</label></div>
+                <div class="form-check mb-2"><input class="form-check-input" type="checkbox" value="whirlpool" id="b-whirlpool"><label class="form-check-label" for="b-whirlpool">Whirlpool</label></div>
+            </div>
+
+            <h6 class="text-info fw-bold mb-3">Customer Rating</h6>
+            <div class="mb-4">
+                
+                <div class="form-check mb-2">
+                    <input class="form-check-input" type="radio" name="rating" id="r4">
+                    <label class="form-check-label" for="r4">4 <i class="bi bi-star-fill text-warning"></i> & Above</label>
+                </div>
+                <div class="form-check mb-2">
+                    <input class="form-check-input" type="radio" name="rating" id="r3">
+                    <label class="form-check-label" for="r3">3 <i class="bi bi-star-fill text-warning"></i> & Above</label>
+                </div>
+                <div class="form-check mb-2">
+                    <input class="form-check-input" type="radio" name="rating" id="r3">
+                    <label class="form-check-label" for="r3">2 <i class="bi bi-star-fill text-warning"></i> & Above</label>
+                </div>
+            </div>
+
+            <h6 class="text-info fw-bold mb-3">Energy Rating</h6>
+            <select class="form-select form-select-sm bg-dark text-white border-secondary mb-4">
+                <option selected>All Ratings</option>
+                <option value="5">5 Star (Highly Efficient)</option>
+                <option value="4">4 Star & Above</option>
+                <option value="3">3 Star & Above</option>
+            </select>
+
+            <div class="form-check form-switch mb-4">
+                <input class="form-check-input" type="checkbox" id="stockSwitch" checked>
+                <label class="form-check-label" for="stockSwitch">Show In-Stock Only</label>
+            </div>
+
+            <div class="d-flex gap-2 sticky-bottom bg-dark pt-3 mt-5">
+                <button type="button" class="btn btn-primary flex-grow-1 fw-bold" data-bs-dismiss="offcanvas">APPLY</button>
+                <button type="reset" class="btn btn-outline-secondary">
+                    <i class="bi bi-arrow-counterclockwise"></i>
+                </button>
+            </div>
+        </form>
+    </div>
+</div>
+
+
+
+
+
+
+
+  
+
+
+  <div class="container my-5">
+  <div class="row g-4" id="productHolder">
+<div class="col-lg-4 col-md-6 col-12">
+  <div class="card h-100 border-0 shadow-sm bg-dark text-white overflow-hidden product-card">
+      <div class="position-relative">
+          <img src="images/gaming-gadget/img1.webp" class="card-img-top p-4" alt="Gaming Mouse" style="height: 250px; object-fit: contain;">
+      </div>
+      <div class="card-body d-flex flex-column">
+          <div class="d-flex justify-content-between align-items-center mb-2">
+              <small class="text-info fw-bold"><i class="bi bi-patch-check-fill me-1"></i> Logitech G</small>
+              <small class="text-warning"><i class="bi bi-star-fill"></i> 4.8</small>
+          </div>
+          <h5 class="card-title mb-1">Wireless Pro Mouse</h5>
+          <p class="card-text text-secondary small flex-grow-1">Ultra-lightweight design with HERO 25K sensor for pixel-precision.</p>
+          <div class="d-flex align-items-center my-3">
+              <span class="fs-4 fw-bold me-2 text-info">₹12,495</span>
+              <span class="text-secondary text-decoration-line-through small">₹15,995</span>
+          </div>
+          <div class="d-grid gap-2 mt-auto">
+              <button class="btn btn-primary fw-bold"><i class="bi bi-cart-plus me-2"></i>Add to Cart</button>
+              <button class="btn btn-outline-light btn-sm"><i class="bi bi-bag me-2"></i>Buy Now</button>
+          </div>
+      </div>
+  </div>
+</div>
+
+<div class="col-lg-4 col-md-6 col-12">
+  <div class="card h-100 border-0 shadow-sm bg-dark text-white overflow-hidden product-card">
+      <div class="position-relative">
+          <img src="images/gaming-gadget/img2.avif" class="card-img-top p-4" alt="Mechanical Keyboard" style="height: 250px; object-fit: contain;">
+      </div>
+      <div class="card-body d-flex flex-column">
+          <div class="d-flex justify-content-between align-items-center mb-2">
+              <small class="text-info fw-bold"><i class="bi bi-patch-check-fill me-1"></i> Razer</small>
+              <small class="text-warning"><i class="bi bi-star-fill"></i> 4.7</small>
+          </div>
+          <h5 class="card-title mb-1">BlackWidow V4 Pro</h5>
+          <p class="card-text text-secondary small flex-grow-1">Mechanical switches with immersive 3-side Chroma RGB underglow.</p>
+          <div class="d-flex align-items-center my-3">
+              <span class="fs-4 fw-bold me-2 text-info">₹18,999</span>
+              <span class="text-secondary text-decoration-line-through small">₹22,999</span>
+          </div>
+          <div class="d-grid gap-2 mt-auto">
+              <button class="btn btn-primary fw-bold"><i class="bi bi-cart-plus me-2"></i>Add to Cart</button>
+              <button class="btn btn-outline-light btn-sm"><i class="bi bi-bag me-2"></i>Buy Now</button>
+          </div>
+      </div>
+  </div>
+</div>
+
+<div class="col-lg-4 col-md-6 col-12">
+  <div class="card h-100 border-0 shadow-sm bg-dark text-white overflow-hidden product-card">
+      <div class="position-relative">
+          <img src="images/gaming-gadget/img3.jpg" class="card-img-top p-4" alt="Gaming Headset" style="height: 250px; object-fit: contain;">
+      </div>
+      <div class="card-body d-flex flex-column">
+          <div class="d-flex justify-content-between align-items-center mb-2">
+              <small class="text-info fw-bold"><i class="bi bi-patch-check-fill me-1"></i> HyperX</small>
+              <small class="text-warning"><i class="bi bi-star-fill"></i> 4.6</small>
+          </div>
+          <h5 class="card-title mb-1">Cloud III Wireless</h5>
+          <p class="card-text text-secondary small flex-grow-1">Up to 120 hours of battery life with DTS Headphone:X Spatial Audio.</p>
+          <div class="d-flex align-items-center my-3">
+              <span class="fs-4 fw-bold me-2 text-info">₹14,290</span>
+              <span class="text-secondary text-decoration-line-through small">₹17,500</span>
+          </div>
+          <div class="d-grid gap-2 mt-auto">
+              <button class="btn btn-primary fw-bold"><i class="bi bi-cart-plus me-2"></i>Add to Cart</button>
+              <button class="btn btn-outline-light btn-sm"><i class="bi bi-bag me-2"></i>Buy Now</button>
+          </div>
+      </div>
+  </div>
+</div>
+
+<div class="col-lg-4 col-md-6 col-12">
+  <div class="card h-100 border-0 shadow-sm bg-dark text-white overflow-hidden product-card">
+      <div class="position-relative">
+          <img src="images/gaming-gadget/img4.avif" class="card-img-top p-4" alt="DualSense Edge" style="height: 250px; object-fit: contain;">
+      </div>
+      <div class="card-body d-flex flex-column">
+          <div class="d-flex justify-content-between align-items-center mb-2">
+              <small class="text-info fw-bold"><i class="bi bi-patch-check-fill me-1"></i> Sony</small>
+              <small class="text-warning"><i class="bi bi-star-fill"></i> 4.9</small>
+          </div>
+          <h5 class="card-title mb-1">DualSense Edge PS5</h5>
+          <p class="card-text text-secondary small flex-grow-1">High-performance wireless controller with customizable controls.</p>
+          <div class="d-flex align-items-center my-3">
+              <span class="fs-4 fw-bold me-2 text-info">₹18,990</span>
+              <span class="text-secondary text-decoration-line-through small">₹20,990</span>
+          </div>
+          <div class="d-grid gap-2 mt-auto">
+              <button class="btn btn-primary fw-bold"><i class="bi bi-cart-plus me-2"></i>Add to Cart</button>
+              <button class="btn btn-outline-light btn-sm"><i class="bi bi-bag me-2"></i>Buy Now</button>
+          </div>
+      </div>
+  </div>
+</div>
+
+<div class="col-lg-4 col-md-6 col-12">
+  <div class="card h-100 border-0 shadow-sm bg-dark text-white overflow-hidden product-card">
+      <div class="position-relative">
+          <img src="images/gaming-gadget/img5.webp" class="card-img-top p-4" alt="Meta Quest 3" style="height: 250px; object-fit: contain;">
+      </div>
+      <div class="card-body d-flex flex-column">
+          <div class="d-flex justify-content-between align-items-center mb-2">
+              <small class="text-info fw-bold"><i class="bi bi-patch-check-fill me-1"></i> Meta</small>
+              <small class="text-warning"><i class="bi bi-star-fill"></i> 4.5</small>
+          </div>
+          <h5 class="card-title mb-1">Quest 3 Mixed Reality</h5>
+          <p class="card-text text-secondary small flex-grow-1">Expand your world with breakthrough high-resolution mixed reality.</p>
+          <div class="d-flex align-items-center my-3">
+              <span class="fs-4 fw-bold me-2 text-info">₹49,999</span>
+              <span class="text-secondary text-decoration-line-through small">₹55,000</span>
+          </div>
+          <div class="d-grid gap-2 mt-auto">
+              <button class="btn btn-primary fw-bold"><i class="bi bi-cart-plus me-2"></i>Add to Cart</button>
+              <button class="btn btn-outline-light btn-sm"><i class="bi bi-bag me-2"></i>Buy Now</button>
+          </div>
+      </div>
+  </div>
+</div>
+
+<div class="col-lg-4 col-md-6 col-12">
+  <div class="card h-100 border-0 shadow-sm bg-dark text-white overflow-hidden product-card">
+      <div class="position-relative">
+          <img src="images/gaming-gadget/img6.jpg" class="card-img-top p-4" alt="Streaming Mic" style="height: 250px; object-fit: contain;">
+      </div>
+      <div class="card-body d-flex flex-column">
+          <div class="d-flex justify-content-between align-items-center mb-2">
+              <small class="text-info fw-bold"><i class="bi bi-patch-check-fill me-1"></i> SteelSeries</small>
+              <small class="text-warning"><i class="bi bi-star-fill"></i> 4.4</small>
+          </div>
+          <h5 class="card-title mb-1">Alias Condenser Mic</h5>
+          <p class="card-text text-secondary small flex-grow-1">Pro-grade XLR-quality sound designed specifically for gamers.</p>
+          <div class="d-flex align-items-center my-3">
+              <span class="fs-4 fw-bold me-2 text-info">₹15,999</span>
+              <span class="text-secondary text-decoration-line-through small">₹19,999</span>
+          </div>
+          <div class="d-grid gap-2 mt-auto">
+              <button class="btn btn-primary fw-bold"><i class="bi bi-cart-plus me-2"></i>Add to Cart</button>
+              <button class="btn btn-outline-light btn-sm"><i class="bi bi-bag me-2"></i>Buy Now</button>
+          </div>
+      </div>
+  </div>
+</div>
+
+
+    <div class="container-fluid my-5">
+    <div class="row justify-content-center">
+        <div class="col-md-10">
+            <div id="electronicsCarousel" class="carousel slide bg-black text-white rounded-4 overflow-hidden shadow-lg border border-secondary" data-bs-ride="carousel">
+                
+                <div class="carousel-indicators">
+                    <button type="button" data-bs-target="#electronicsCarousel" data-bs-slide-to="0" class="active"></button>
+                    <button type="button" data-bs-target="#electronicsCarousel" data-bs-slide-to="1"></button>
+                    <button type="button" data-bs-target="#electronicsCarousel" data-bs-slide-to="2"></button>
+                    <button type="button" data-bs-target="#electronicsCarousel" data-bs-slide-to="3"></button>
+                </div>
+
+                <div class="carousel-inner">
+                    <div class="carousel-item active" style="min-height: 400px;">
+                        <div class="row g-0 h-100 align-items-center">
+                            <div class="col-md-7 p-5">
+                                <span class="badge bg-info text-dark fw-bold mb-3 px-3 py-2">FESTIVE SALE</span>
+                                <h1 class="display-4 fw-bold mb-2">UP TO <span class="text-info">35% OFF</span></h1>
+                                <h3 class="fw-light mb-4">On Premium Smart Refrigerators</h3>
+                                <p class="text-secondary mb-4">Upgrade to AI-powered cooling with 10 years warranty. Starting from ₹45,999.</p>
+                                <button class="btn btn-info btn-lg fw-bold px-5 py-3 rounded-pill shadow">SHOP COLLECTION</button>
+                            </div>
+                            <div class="col-md-5 text-center position-relative">
+                                <div class="carousel-glow"></div>
+                                <img src="images/gaming-gadget/headphone-index.png" class="img-fluid banner-img p-4" alt="Premium Fridge">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="carousel-item" style="min-height: 400px;">
+                        <div class="row g-0 h-100 align-items-center">
+                            <div class="col-md-7 p-5">
+                                <span class="badge bg-warning text-dark fw-bold mb-3 px-3 py-2">NEW ARRIVAL</span>
+                                <h1 class="display-4 fw-bold mb-2">FLAT <span class="text-warning">₹5,000 OFF</span></h1>
+                                <h3 class="fw-light mb-4">On AI Direct Drive Washers</h3>
+                                <p class="text-secondary mb-4">Wash smarter, not harder. Limited period exchange offer available.</p>
+                                <button class="btn btn-warning btn-lg fw-bold px-5 py-3 rounded-pill shadow">VIEW DEALS</button>
+                            </div>
+                            <div class="col-md-5 text-center position-relative">
+                                <div class="carousel-glow-alt"></div>
+                                <img src="images/laptop/laptop-index.png" class="img-fluid banner-img p-4" alt="Washing Machine">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item" style="min-height: 400px;">
+                        <div class="row g-0 h-100 align-items-center">
+                            <div class="col-md-7 p-5">
+                                <span class="badge bg-info text-dark fw-bold mb-3 px-3 py-2">Latest SALE</span>
+                                <h1 class="display-4 fw-bold mb-2">UP TO <span class="text-info">35% OFF</span></h1>
+                                <h3 class="fw-light mb-4">On Premium Smart Refrigerators</h3>
+                                <p class="text-danger mb-4">Upgrade to AI-powered cooling with 10 years warranty. Starting from ₹45,999.</p>
+                                <button class="btn btn-info btn-lg fw-bold px-5 py-3 rounded-pill shadow">SHOP COLLECTION</button>
+                            </div>
+                            <div class="col-md-5 text-center position-relative">
+                                <div class="carousel-glow"></div>
+                                <img src="images/watches/watch-index.png" class="img-fluid banner-img p-4" alt="Premium Fridge">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="carousel-item" style="min-height: 400px;">
+                        <div class="row g-0 h-100 align-items-center">
+                            <div class="col-md-7 p-5">
+                                <span class="badge bg-warning text-dark fw-bold mb-3 px-3 py-2">NEW ARRIVAL</span>
+                                <h1 class="display-4 fw-bold mb-2">FLAT <span class="text-warning">₹5,000 OFF</span></h1>
+                                <h3 class="fw-light mb-4">On AI Direct Drive Washers</h3>
+                                <p class="text-warning mb-4">Wash smarter, not harder. Limited period exchange offer available.</p>
+                                <button class="btn btn-warning btn-lg fw-bold px-5 py-3 rounded-pill shadow">VIEW DEALS</button>
+                            </div>
+                            <div class="col-md-5 text-center position-relative">
+                                <div class="carousel-glow-alt"></div>
+                                <img src="images/mobile/mobile-index.png" class="img-fluid banner-img p-4" alt="Washing Machine">
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <button class="carousel-control-prev" type="button" data-bs-target="#electronicsCarousel" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon opacity-50"></span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#electronicsCarousel" data-bs-slide="next">
+                    <span class="carousel-control-next-icon opacity-50"></span>
+                </button>
+                
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div class="col-lg-4 col-md-6 col-12">
+  <div class="card h-100 border-0 shadow-sm bg-dark text-white overflow-hidden product-card">
+      <div class="position-relative">
+          <img src="images/gaming-gadget/img7.jpg" class="card-img-top p-4" alt="Gaming Monitor" style="height: 250px; object-fit: contain;">
+      </div>
+      <div class="card-body d-flex flex-column">
+          <div class="d-flex justify-content-between align-items-center mb-2">
+              <small class="text-info fw-bold"><i class="bi bi-patch-check-fill me-1"></i> Samsung Odyssey</small>
+              <small class="text-warning"><i class="bi bi-star-fill"></i> 4.8</small>
+          </div>
+          <h5 class="card-title mb-1">Odyssey G7 Curved</h5>
+          <p class="card-text text-secondary small flex-grow-1">240Hz refresh rate and 1ms response time for competitive edge.</p>
+          <div class="d-flex align-items-center my-3">
+              <span class="fs-4 fw-bold me-2 text-info">₹45,999</span>
+              <span class="text-secondary text-decoration-line-through small">₹52,000</span>
+          </div>
+          <div class="d-grid gap-2 mt-auto">
+              <button class="btn btn-primary fw-bold"><i class="bi bi-cart-plus me-2"></i>Add to Cart</button>
+              <button class="btn btn-outline-light btn-sm"><i class="bi bi-bag me-2"></i>Buy Now</button>
+          </div>
+      </div>
+  </div>
+</div>
+
+<div class="col-lg-4 col-md-6 col-12">
+  <div class="card h-100 border-0 shadow-sm bg-dark text-white overflow-hidden product-card">
+      <div class="position-relative">
+          <img src="images/gaming-gadget/img8.avif" class="card-img-top p-4" alt="Handheld Console" style="height: 250px; object-fit: contain;">
+      </div>
+      <div class="card-body d-flex flex-column">
+          <div class="d-flex justify-content-between align-items-center mb-2">
+              <small class="text-info fw-bold"><i class="bi bi-patch-check-fill me-1"></i> Valve</small>
+              <small class="text-warning"><i class="bi bi-star-fill"></i> 4.9</small>
+          </div>
+          <h5 class="card-title mb-1">Steam Deck OLED</h5>
+          <p class="card-text text-secondary small flex-grow-1">Your entire Steam library in a powerful, portable handheld.</p>
+          <div class="d-flex align-items-center my-3">
+              <span class="fs-4 fw-bold me-2 text-info">₹58,900</span>
+              <span class="text-secondary text-decoration-line-through small">₹65,000</span>
+          </div>
+          <div class="d-grid gap-2 mt-auto">
+              <button class="btn btn-primary fw-bold"><i class="bi bi-cart-plus me-2"></i>Add to Cart</button>
+              <button class="btn btn-outline-light btn-sm"><i class="bi bi-bag me-2"></i>Buy Now</button>
+          </div>
+      </div>
+  </div>
+</div>
+
+<div class="col-lg-4 col-md-6 col-12">
+  <div class="card h-100 border-0 shadow-sm bg-dark text-white overflow-hidden product-card">
+      <div class="position-relative">
+          <img src="images/gaming-gadget/img9.jpg" class="card-img-top p-4" alt="Racing Wheel" style="height: 250px; object-fit: contain;">
+      </div>
+      <div class="card-body d-flex flex-column">
+          <div class="d-flex justify-content-between align-items-center mb-2">
+              <small class="text-info fw-bold"><i class="bi bi-patch-check-fill me-1"></i> Thrustmaster</small>
+              <small class="text-warning"><i class="bi bi-star-fill"></i> 4.5</small>
+          </div>
+          <h5 class="card-title mb-1">T300 RS GT Edition</h5>
+          <p class="card-text text-secondary small flex-grow-1">Force feedback racing wheel for a realistic simulation experience.</p>
+          <div class="d-flex align-items-center my-3">
+              <span class="fs-4 fw-bold me-2 text-info">₹38,499</span>
+              <span class="text-secondary text-decoration-line-through small">₹42,000</span>
+          </div>
+          <div class="d-grid gap-2 mt-auto">
+              <button class="btn btn-primary fw-bold"><i class="bi bi-cart-plus me-2"></i>Add to Cart</button>
+              <button class="btn btn-outline-light btn-sm"><i class="bi bi-bag me-2"></i>Buy Now</button>
+          </div>
+      </div>
+  </div>
+</div>
+
+<div class="col-lg-4 col-md-6 col-12">
+  <div class="card h-100 border-0 shadow-sm bg-dark text-white overflow-hidden product-card">
+      <div class="position-relative">
+          <img src="images/gaming-gadget/img10.jpg" class="card-img-top p-4" alt="RGB Mousepad" style="height: 250px; object-fit: contain;">
+      </div>
+      <div class="card-body d-flex flex-column">
+          <div class="d-flex justify-content-between align-items-center mb-2">
+              <small class="text-info fw-bold"><i class="bi bi-patch-check-fill me-1"></i> Corsair</small>
+              <small class="text-warning"><i class="bi bi-star-fill"></i> 4.4</small>
+          </div>
+          <h5 class="card-title mb-1">MM700 RGB Extended</h5>
+          <p class="card-text text-secondary small flex-grow-1">Massive surface for mouse and keyboard with 360° dynamic RGB.</p>
+          <div class="d-flex align-items-center my-3">
+              <span class="fs-4 fw-bold me-2 text-info">₹4,999</span>
+              <span class="text-secondary text-decoration-line-through small">₹6,499</span>
+          </div>
+          <div class="d-grid gap-2 mt-auto">
+              <button class="btn btn-primary fw-bold"><i class="bi bi-cart-plus me-2"></i>Add to Cart</button>
+              <button class="btn btn-outline-light btn-sm"><i class="bi bi-bag me-2"></i>Buy Now</button>
+          </div>
+      </div>
+  </div>
+</div>
+
+<div class="col-lg-4 col-md-6 col-12">
+  <div class="card h-100 border-0 shadow-sm bg-dark text-white overflow-hidden product-card">
+      <div class="position-relative">
+          <img src="images/gaming-gadget/img11.jpg" class="card-img-top p-4" alt="Gaming Chair" style="height: 250px; object-fit: contain;">
+      </div>
+      <div class="card-body d-flex flex-column">
+          <div class="d-flex justify-content-between align-items-center mb-2">
+              <small class="text-info fw-bold"><i class="bi bi-patch-check-fill me-1"></i> Secretlab</small>
+              <small class="text-warning"><i class="bi bi-star-fill"></i> 4.7</small>
+          </div>
+          <h5 class="card-title mb-1">TITAN Evo Series</h5>
+          <p class="card-text text-secondary small flex-grow-1">Ergonomic support with magnetic memory foam pillows.</p>
+          <div class="d-flex align-items-center my-3">
+              <span class="fs-4 fw-bold me-2 text-info">₹32,999</span>
+              <span class="text-secondary text-decoration-line-through small">₹39,999</span>
+          </div>
+          <div class="d-grid gap-2 mt-auto">
+              <button class="btn btn-primary fw-bold"><i class="bi bi-cart-plus me-2"></i>Add to Cart</button>
+              <button class="btn btn-outline-light btn-sm"><i class="bi bi-bag me-2"></i>Buy Now</button>
+          </div>
+      </div>
+  </div>
+</div>
+
+<div class="col-lg-4 col-md-6 col-12">
+  <div class="card h-100 border-0 shadow-sm bg-dark text-white overflow-hidden product-card">
+      <div class="position-relative">
+          <img src="images/gaming-gadget/img12.jpg" class="card-img-top p-4" alt="Elgato Stream Deck" style="height: 250px; object-fit: contain;">
+      </div>
+      <div class="card-body d-flex flex-column">
+          <div class="d-flex justify-content-between align-items-center mb-2">
+              <small class="text-info fw-bold"><i class="bi bi-patch-check-fill me-1"></i> Elgato</small>
+              <small class="text-warning"><i class="bi bi-star-fill"></i> 4.6</small>
+          </div>
+          <h5 class="card-title mb-1">Stream Deck MK.2</h5>
+          <p class="card-text text-secondary small flex-grow-1">15 customizable LCD keys to control apps and tools instantly.</p>
+          <div class="d-flex align-items-center my-3">
+              <span class="fs-4 fw-bold me-2 text-info">₹13,499</span>
+              <span class="text-secondary text-decoration-line-through small">₹15,999</span>
+          </div>
+          <div class="d-grid gap-2 mt-auto">
+              <button class="btn btn-primary fw-bold"><i class="bi bi-cart-plus me-2"></i>Add to Cart</button>
+              <button class="btn btn-outline-light btn-sm"><i class="bi bi-bag me-2"></i>Buy Now</button>
+          </div>
+      </div>
+  </div>
+</div>
+  
+    
+
+
+
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+<button type="button" class="btn btn-info btn-back-to-top shadow" id="btn-back-to-top">
+  <i class="bi bi-arrow-up"></i>
+</button>
+<div id="footerHolder"></div>
+
+
+-to-top">
+  <i class="bi bi-arrow-up"></i>
+</button>
+<div id="footerHolder"></div>
+
+
+<script src="scripts/script.js"></script>
+ <script src="scripts/add-footer.js"></script>
+  <script src="bootstrap/bootstrap.bundle.min.js"></script>
+  <script src="scripts/add-navbar.js"></script>
+
+</body>
+</html>
