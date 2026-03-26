@@ -301,3 +301,51 @@ body {
 .x-small {
     font-size: 0.75rem;
 }
+
+#electronicsCarousel .banner-img {
+    max-height: 300px;
+    object-fit: contain;
+}
+
+@media (max-width: 768px) {
+    #electronicsCarousel .carousel-item {
+        min-height: auto !important;
+    }
+
+    #electronicsCarousel .col-md-7 {
+        padding: 1.25rem !important;
+        text-align: center;
+    }
+
+    #electronicsCarousel h1 {
+        font-size: 1.75rem;
+    }
+
+    #electronicsCarousel h3 {
+        font-size: 1.05rem;
+    }
+
+    #electronicsCarousel p {
+        font-size: 0.92rem;
+        margin-bottom: 1rem !important;
+    }
+
+    #electronicsCarousel .btn {
+        width: 100%;
+        max-width: 260px;
+    }
+
+    #electronicsCarousel .col-md-5 {
+        padding: 0 1rem 1rem;
+    }
+
+    #electronicsCarousel .banner-img {
+        max-height: 210px;
+        padding: 0.5rem !important;
+    }
+
+    #electronicsCarousel .carousel-control-prev,
+    #electronicsCarousel .carousel-control-next {
+        width: 12%;
+    }
+}

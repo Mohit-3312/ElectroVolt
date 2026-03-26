@@ -50,9 +50,6 @@ const navbarHTML = `
           <a class="nav-link text-light rounded-4" href="cart.html">Cart</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link text-light rounded-4" href="about-us.html">About Us</a>
-        </li>
-        <li class="nav-item">
           <a class="nav-link text-light rounded-4" href="feedback.html">Feedback</a>
         </li>
       </ul>
