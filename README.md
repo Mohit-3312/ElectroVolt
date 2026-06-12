@@ -24,7 +24,7 @@ This project focuses on using Bootstrap components and grid system to create a c
 
 Add screenshot here:
 
-![ElectroVolt Preview](.preview.jpg)
+![ElectroVolt Preview](preview.jpg)
 
 ## 🎯 Purpose of Project
 
